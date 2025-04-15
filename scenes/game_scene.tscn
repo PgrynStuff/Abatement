@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq4hxfw147dua"]
+
+[ext_resource type="PackedScene" uid="uid://bjo2cpjmkikaq" path="res://entities/controller/game_controller.tscn" id="1_ycayy"]
+[ext_resource type="PackedScene" uid="uid://m5iw5dtqrmtt" path="res://entities/controller/camera_controller.tscn" id="2_bw6k5"]
+[ext_resource type="PackedScene" uid="uid://m72jo2q3o4vj" path="res://entities/controller/audio_controller.tscn" id="3_y3j0m"]
+[ext_resource type="PackedScene" uid="uid://d2tfvy1027kbj" path="res://entities/controller/character_controller.tscn" id="4_bw6k5"]
+[ext_resource type="PackedScene" uid="uid://c8tnmi4w8jt0a" path="res://scenes/world/dev.tscn" id="5_y3j0m"]
+
+[node name="GameScene" type="Node"]
+
+[node name="AudioController" parent="." instance=ExtResource("3_y3j0m")]
+
+[node name="CameraController" parent="." instance=ExtResource("2_bw6k5")]
+
+[node name="CharacterController" parent="." instance=ExtResource("4_bw6k5")]
+
+[node name="GameController" parent="." instance=ExtResource("1_ycayy")]
+
+[node name="World" parent="." instance=ExtResource("5_y3j0m")]
