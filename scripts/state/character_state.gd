@@ -8,7 +8,7 @@ func enter() -> void:
 		entity.set_position(Global.character_controller.position  + Vector3(0, .75, 0))
 
 func update(delta: float) -> void:
-	entity.set_position(entity.get_position().lerp(Global.character_controller.position + Vector3(0, .75, 0), delta * 50))
+	entity.set_position(entity.get_position().lerp(Global.character_controller.position + Vector3(0, .75, 0), delta * 40))
 	entity.set_rotation(rotation)
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -23,4 +23,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	rotation.y -= event.relative.x * 0.001
 	rotation.x -= event.relative.y * 0.001
 	Global.character_controller.rotation.y = -rotation.y
-	rotation.x = clamp(rotation.x, deg_to_rad(-90), deg_to_rad(90))
+	rotation.x = clamp(rotation.x, deg_to_rad(-70), deg_to_rad(88))

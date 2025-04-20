@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioResource" load_steps=3 format=3 uid="uid://bo6qutib6560m"]
+
+[ext_resource type="AudioStream" uid="uid://dl06afammkce4" path="res://common/clip/drywall_footstep1.wav" id="1_eeo3p"]
+[ext_resource type="Script" uid="uid://d0iu25h7oyxq8" path="res://scripts/resource/audio_resource.gd" id="2_k4dhd"]
+
+[resource]
+script = ExtResource("2_k4dhd")
+name = "footstep01"
+clip = ExtResource("1_eeo3p")
+volume = -30.0
+min_pitch = 0.5
+max_pitch = 1.5
+metadata/_custom_type_script = "uid://d0iu25h7oyxq8"

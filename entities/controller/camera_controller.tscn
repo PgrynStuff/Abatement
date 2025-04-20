@@ -4,12 +4,16 @@
 [ext_resource type="Script" uid="uid://dnxrwla16ocue" path="res://scripts/state/state_machine.gd" id="2_m3otb"]
 [ext_resource type="Script" uid="uid://cd531kvj31o1k" path="res://scripts/state/character_state.gd" id="3_ew5bm"]
 
-[node name="CameraController" type="Node" node_paths=PackedStringArray("camera")]
+[node name="CameraController" type="Node" node_paths=PackedStringArray("camera", "interaction_ray")]
 script = ExtResource("1_jhfef")
 camera = NodePath("Camera")
+interaction_ray = NodePath("Camera/Interaction")
 metadata/_custom_type_script = "uid://c6u1o5t68nyj5"
 
 [node name="Camera" type="Camera3D" parent="."]
+
+[node name="Interaction" type="RayCast3D" parent="Camera"]
+target_position = Vector3(0, 0, -2)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
 script = ExtResource("2_m3otb")

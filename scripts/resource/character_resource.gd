@@ -2,8 +2,8 @@
 class_name CharacterResource
 extends Resource
 
-@export var gravity: float = 12
-@export var jump_force: float = 4.5
+@export var gravity: float = 20
+@export var jump_force: float = 7
 @export var walk_force: float = 7
 @export var sprint_force: float = 10
 

@@ -7,17 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://c7yth5opetwes" path="res://common/dev/textures/kenney-dark-grey-checkerboard.png" id="5_pnti6"]
 [ext_resource type="Texture2D" uid="uid://b28c62e3f23vb" path="res://common/dev/textures/kenney-orange-checkerboard-cc0.png" id="6_s6lf8"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bwjpn"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bskb3"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
-[sub_resource type="Sky" id="Sky_hfysu"]
-sky_material = SubResource("ProceduralSkyMaterial_bwjpn")
+[sub_resource type="Sky" id="Sky_alve2"]
+sky_material = SubResource("ProceduralSkyMaterial_bskb3")
 
-[sub_resource type="Environment" id="Environment_dpqee"]
+[sub_resource type="Environment" id="Environment_81vdr"]
 background_mode = 2
-sky = SubResource("Sky_hfysu")
+sky = SubResource("Sky_alve2")
 tonemap_mode = 2
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
+glow_enabled = true
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2t6ga"]
 
@@ -173,13 +174,14 @@ albedo_texture = ExtResource("6_s6lf8")
 
 [node name="World" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_dpqee")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, -0.353555, 0.883882, 0.306189, -0.353556, 0.176778, -0.918558, 0, 0, 0)
-light_energy = 0.75
+transform = Transform3D(-0.00743052, 0.912351, -0.409343, 0.539357, 0.34836, 0.766642, 0.842044, -0.215085, -0.494671, 0, 2.4618, 0)
+light_energy = 0.648
+light_specular = 0.0
 shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_81vdr")
 
 [node name="Level" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, -1.478, -28)
@@ -409,7 +411,7 @@ shape = SubResource("BoxShape3D_uchwa")
 
 [node name="RigidBody3D6" type="RigidBody3D" parent="Level/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3, 1.5, -41.1)
-mass = 10.0
+mass = 30.0
 continuous_cd = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Props/RigidBody3D6"]
@@ -420,7 +422,7 @@ shape = SubResource("BoxShape3D_hyueo")
 
 [node name="RigidBody3D4" type="RigidBody3D" parent="Level/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.6, 3.75, -38.9)
-mass = 5.0
+mass = 30.0
 continuous_cd = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Props/RigidBody3D4"]
@@ -432,7 +434,7 @@ shape = SubResource("SphereShape3D_35c67")
 
 [node name="RigidBody3D3" type="RigidBody3D" parent="Level/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.6, 3, -38.9)
-mass = 5.0
+mass = 30.0
 continuous_cd = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Props/RigidBody3D3"]
@@ -443,7 +445,7 @@ shape = SubResource("SphereShape3D_vroro")
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="Level/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.6, 1.5, -38.9)
-mass = 10.0
+mass = 30.0
 continuous_cd = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Props/RigidBody3D2"]
