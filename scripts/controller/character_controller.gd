@@ -1,4 +1,3 @@
-@icon("res://common/icons/controller/character_controller.svg")
 class_name CharacterController
 extends CharacterBody3D
 

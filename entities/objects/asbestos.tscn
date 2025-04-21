@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c14agx8nl7dy8"]
+
+[ext_resource type="PackedScene" uid="uid://ceksfecgu24og" path="res://common/models/asbestos_1.glb" id="1_g2pih"]
+[ext_resource type="Script" uid="uid://bbaqo73a6ytxq" path="res://scripts/component/asbestos_component.gd" id="1_jxudy"]
+[ext_resource type="PackedScene" uid="uid://0ovbx30jn0l5" path="res://common/models/asbestos_2.glb" id="2_vkgte"]
+[ext_resource type="PackedScene" uid="uid://dyxraauu102i6" path="res://common/models/asbestos_3.glb" id="3_mmjfw"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g2pih"]
+points = PackedVector3Array(0, 0, 0.5, 0.433013, 0, 0.25, 0, 0.353465, 0.353465, -0.306195, 0.353465, 0.176684, -0.433013, 0, 0.249902, -0.306195, -0.353563, 0.176684, 0, -0.353563, 0.353465, 0.30611, 0.353465, 0.176684, 0.30611, -0.353563, 0.176684, 0.433013, 0, -0.250098, 0, 0.5, 0, -0.306195, 0.353465, -0.176782, -0.433013, 0, -0.25, -0.306195, -0.353563, -0.176782, 0, -0.5, 0, 0.30611, 0.353465, -0.176782, 0.30611, -0.353563, -0.176782, 0, -0.353563, -0.353563, 0, 0, -0.5, 0, 0.353465, -0.353563)
+
+[node name="Asbestos" type="RigidBody3D"]
+mass = 10.0
+
+[node name="AsbestosComponent" type="Node" parent="." node_paths=PackedStringArray("meshes")]
+script = ExtResource("1_jxudy")
+meshes = [NodePath("../Mesh/asbestos_1"), NodePath("../Mesh/asbestos_2"), NodePath("../Mesh/asbestos_3")]
+metadata/_custom_type_script = "uid://bbaqo73a6ytxq"
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_g2pih")
+
+[node name="Mesh" type="Node3D" parent="."]
+
+[node name="asbestos_1" parent="Mesh" instance=ExtResource("1_g2pih")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="asbestos_2" parent="Mesh" instance=ExtResource("2_vkgte")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="asbestos_3" parent="Mesh" instance=ExtResource("3_mmjfw")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)

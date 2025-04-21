@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://dxlaqflvcp45u"]
+
+[ext_resource type="PackedScene" uid="uid://cby6brgwtksqm" path="res://common/models/trashbag_1.glb" id="1_6gxt0"]
+[ext_resource type="Script" uid="uid://bs4h3rik11a8j" path="res://scripts/component/trashbag_component.gd" id="1_embyj"]
+[ext_resource type="Script" uid="uid://mo6u3rx5ln77" path="res://scripts/component/interactable_component.gd" id="1_o0iwa"]
+[ext_resource type="PackedScene" uid="uid://b5gtmki3kc8ea" path="res://common/models/trashbag_2.glb" id="2_embyj"]
+[ext_resource type="PackedScene" uid="uid://duth6n03v3bo4" path="res://common/models/trashbag_3.glb" id="3_o0iwa"]
+[ext_resource type="PackedScene" uid="uid://bgovrof3ukv58" path="res://common/models/trashbag_4.glb" id="4_tvrc6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_embyj"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_embyj"]
+points = PackedVector3Array(-0.2939, 0, -0.404509, -0.254521, -0.0750294, -0.350323, -0.411851, -0.0750294, 0.133805, -0.475528, 0, 0.154435, -0.411851, 0.0749706, 0.133805, -0.254521, 0.0749706, -0.350323, 0.293807, 0, -0.404509, -0.146997, -0.129914, -0.202287, -0.237857, -0.129914, 0.077229, 0.254428, -0.0750294, -0.350323, 0, -0.0750294, 0.432976, 0, 0, 0.5, -0.237764, 0.129884, 0.077229, -0.146997, 0.129884, -0.202287, 0, 0.0749706, 0.432976, 0, 0.129884, 0.249967, 0.254428, 0.0749706, -0.350323, 0.475528, 0, 0.154435, 0.146904, -0.129914, -0.202287, 0, -0.15, -6.50287e-05, 0, -0.129914, 0.249967, 0.411758, -0.0750294, 0.133805, 0.237764, -0.129914, 0.077229, 0.411758, 0.0749706, 0.133805, 0, 0.15, -6.50287e-05, 0.146904, 0.129884, -0.202287, 0.237764, 0.129884, 0.077229)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a5oyj"]
+points = PackedVector3Array(-0.475528, 0, 0.154435, 0, 0, 0.5, -0.411851, 0.25, 0.133805, -0.2939, 0, -0.404509, -0.411851, -0.250098, 0.133805, 0, -0.250098, 0.432976, 0.411758, -0.250098, 0.133805, 0.475528, 0, 0.154435, 0.411758, 0.25, 0.133805, 0, 0.25, 0.432976, 0, 0.432948, 0.249967, -0.237764, 0.432948, 0.077229, -0.146997, 0.432948, -0.202287, -0.254521, 0.25, -0.350323, -0.254521, -0.250098, -0.350323, 0.293807, 0, -0.404509, -0.237857, -0.433046, 0.077229, 0, -0.433046, 0.249967, 0.237764, -0.433046, 0.077229, 0.254428, -0.250098, -0.350323, 0.254428, 0.25, -0.350323, 0.237764, 0.432948, 0.077229, 0, 0.5, -6.50287e-05, 0.146904, 0.432948, -0.202287, -0.146997, -0.433046, -0.202287, 0, -0.5, -6.50287e-05, 0.146904, -0.433046, -0.202287)
+
+[node name="Trashbag" type="RigidBody3D"]
+mass = 20.0
+
+[node name="InteractionComponent" type="Node" parent="."]
+script = ExtResource("1_o0iwa")
+metadata/_custom_type_script = "uid://mo6u3rx5ln77"
+
+[node name="TrashComponent" type="Area3D" parent="." node_paths=PackedStringArray("colliders", "meshes", "label")]
+script = ExtResource("1_embyj")
+colliders = [NodePath("../CollisionSmall"), NodePath("../CollisionSmall"), NodePath("../Collision"), NodePath("../Collision")]
+meshes = [NodePath("../Mesh/trashbag_1"), NodePath("../Mesh/trashbag_2"), NodePath("../Mesh/trashbag_3"), NodePath("../Mesh/trashbag_4")]
+label = NodePath("../Label")
+metadata/_custom_type_script = "uid://bs4h3rik11a8j"
+
+[node name="Collision" type="CollisionShape3D" parent="TrashComponent"]
+shape = SubResource("BoxShape3D_embyj")
+
+[node name="CollisionSmall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.110595, 0)
+shape = SubResource("ConvexPolygonShape3D_embyj")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_a5oyj")
+disabled = true
+
+[node name="Mesh" type="Node3D" parent="."]
+
+[node name="trashbag_1" parent="Mesh" instance=ExtResource("1_6gxt0")]
+
+[node name="trashbag_2" parent="Mesh" instance=ExtResource("2_embyj")]
+visible = false
+
+[node name="trashbag_3" parent="Mesh" instance=ExtResource("3_o0iwa")]
+visible = false
+
+[node name="trashbag_4" parent="Mesh" instance=ExtResource("4_tvrc6")]
+visible = false
+
+[node name="Label" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+billboard = 1
+alpha_cut = 1
+texture_filter = 5
+
+[connection signal="enter" from="InteractionComponent" to="TrashComponent" method="_on_interaction_component_enter"]
+[connection signal="exit" from="InteractionComponent" to="TrashComponent" method="_on_interaction_component_exit"]
+[connection signal="area_entered" from="TrashComponent" to="TrashComponent" method="_on_area_entered"]
+[connection signal="body_entered" from="TrashComponent" to="TrashComponent" method="_on_body_entered"]

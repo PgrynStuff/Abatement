@@ -1,4 +1,3 @@
-@icon("res://common/icons/controller/audio_controller.svg")
 class_name AudioResource
 extends Resource
 

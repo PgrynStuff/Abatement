@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GameResource" load_steps=2 format=3 uid="uid://7yxdfsa5nykl"]
+
+[ext_resource type="Script" uid="uid://oq127gp5v8el" path="res://scripts/resource/game_resource.gd" id="1_h23ji"]
+
+[resource]
+script = ExtResource("1_h23ji")
+timer = 90.0
+metadata/_custom_type_script = "uid://oq127gp5v8el"

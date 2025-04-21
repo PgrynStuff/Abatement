@@ -1,4 +1,3 @@
-@icon("res://common/icons/state/state.svg")
 class_name StateMachine
 extends Node
 

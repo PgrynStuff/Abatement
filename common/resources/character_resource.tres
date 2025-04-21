@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=2 format=3 uid="uid://6p4soaslmnfy"]
+
+[ext_resource type="Script" uid="uid://dl3o4sjl3i8wi" path="res://scripts/resource/character_resource.gd" id="1_tigkv"]
+
+[resource]
+script = ExtResource("1_tigkv")
+gravity = 20.0
+jump_force = 7.0
+walk_force = 7.0
+sprint_force = 10.0
+ground_acceleration = 11.0
+ground_deceleration = 7.0
+ground_friction = 3.5
+airborne_acceleration = 800.0
+airborne_coefficient = 500.0
+airborne_cap = 0.85
+metadata/_custom_type_script = "uid://dl3o4sjl3i8wi"

@@ -1,4 +1,3 @@
-@icon("res://common/icons/controller/character_controller.svg")
 class_name CharacterResource
 extends Resource
 

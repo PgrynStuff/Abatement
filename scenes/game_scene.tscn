@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dq4hxfw147dua"]
+[gd_scene load_steps=11 format=3 uid="uid://dq4hxfw147dua"]
 
 [ext_resource type="PackedScene" uid="uid://bjo2cpjmkikaq" path="res://entities/controller/game_controller.tscn" id="1_ycayy"]
 [ext_resource type="PackedScene" uid="uid://m5iw5dtqrmtt" path="res://entities/controller/camera_controller.tscn" id="2_bw6k5"]
 [ext_resource type="PackedScene" uid="uid://m72jo2q3o4vj" path="res://entities/controller/audio_controller.tscn" id="3_y3j0m"]
 [ext_resource type="PackedScene" uid="uid://d2tfvy1027kbj" path="res://entities/controller/character_controller.tscn" id="4_bw6k5"]
 [ext_resource type="PackedScene" uid="uid://c8tnmi4w8jt0a" path="res://scenes/world/dev.tscn" id="6_rurhu"]
+[ext_resource type="PackedScene" uid="uid://cjcyoxql1u0sy" path="res://entities/objects/sledge_hammer.tscn" id="7_kk2rg"]
+[ext_resource type="PackedScene" uid="uid://dxlaqflvcp45u" path="res://entities/objects/trashbag.tscn" id="8_b5spy"]
+[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="9_utbpp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mw25s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tcjrq"]
 
 [node name="GameScene" type="Node"]
 
@@ -17,3 +24,22 @@
 [node name="GameController" parent="." instance=ExtResource("1_ycayy")]
 
 [node name="World" parent="." instance=ExtResource("6_rurhu")]
+
+[node name="SledgeHammer" parent="." instance=ExtResource("7_kk2rg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29424, 0.9541, -0.782898)
+
+[node name="Trashbag" parent="." instance=ExtResource("8_b5spy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.08048, 0.437737, -3.37933)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.92937)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_mw25s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_tcjrq")
+
+[node name="DestructibleComponent" type="Node3D" parent="RigidBody3D"]
+script = ExtResource("9_utbpp")
+metadata/_custom_type_script = "uid://dmsa0tsdu6huh"

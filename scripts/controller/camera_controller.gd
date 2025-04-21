@@ -1,10 +1,10 @@
-@icon("res://common/icons/controller/camera_controller.svg")
 class_name CameraController
 extends Node
 
 @export var camera: Camera3D
 @export var interaction_ray: RayCast3D
 
+var interactable: InteractableComponent
 var object: RigidBody3D
 
 func _ready() -> void:
@@ -17,8 +17,26 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	move_object()
 	
+	if interaction_ray.get_collider() != null:
+		for child in (interaction_ray.get_collider()).get_children():
+			if child is InteractableComponent:
+				if child != interactable:
+					if interactable != null:
+						interactable.exit.emit()
+				child.enter.emit()
+				interactable = child
+	else:
+		if interactable != null:
+			interactable.exit.emit()
+			interactable = null
+	
 	if (!Input.is_action_just_pressed("camera_interact") and 
 		!Input.is_action_just_pressed("camera_throw")): return
+	
+	if interactable != null: 
+		interactable.use.emit() 
+		print("yes")
+	
 	if pickup_object(): return
 	
 	drop_object()
