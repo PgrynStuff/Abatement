@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dbkyac76o61fa"
+path="res://.godot/imported/house.map-d1a19243a5a7a1159b69ec406324e4cb.tres"
+
+[deps]
+
+source_file="res://common/maps/house.map"
+dest_files=["res://.godot/imported/house.map-d1a19243a5a7a1159b69ec406324e4cb.tres"]
+
+[params]
+

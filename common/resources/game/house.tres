@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameResource" load_steps=3 format=3 uid="uid://c4pypd66420n5"]
+
+[ext_resource type="PackedScene" uid="uid://cah73t8bqjgi7" path="res://scenes/house.tscn" id="1_pbvxi"]
+[ext_resource type="Script" uid="uid://oq127gp5v8el" path="res://scripts/resource/game_resource.gd" id="1_sx515"]
+
+[resource]
+script = ExtResource("1_sx515")
+name = "House"
+scene = ExtResource("1_pbvxi")
+timer = 90.0
+spawn = Vector3(0, 15, 0)
+metadata/_custom_type_script = "uid://oq127gp5v8el"

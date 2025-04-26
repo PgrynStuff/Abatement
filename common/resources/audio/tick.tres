@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioResource" load_steps=3 format=3 uid="uid://htj4lyi3v3kk"]
+
+[ext_resource type="Script" uid="uid://d0iu25h7oyxq8" path="res://scripts/resource/audio_resource.gd" id="1_74num"]
+[ext_resource type="AudioStream" uid="uid://dot61op3w085u" path="res://common/stream/tick.wav" id="1_s5n40"]
+
+[resource]
+script = ExtResource("1_74num")
+name = "tick"
+clip = ExtResource("1_s5n40")
+volume = 0.0
+min_pitch = 1.0
+max_pitch = 1.0
+metadata/_custom_type_script = "uid://d0iu25h7oyxq8"

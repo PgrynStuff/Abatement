@@ -10,11 +10,11 @@ var object: RigidBody3D
 func _ready() -> void:
 	Global.camera_controller = self
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for child in get_children():
 		pass
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_object()
 	
 	if interaction_ray.get_collider() != null:
@@ -35,7 +35,6 @@ func _physics_process(delta: float) -> void:
 	
 	if interactable != null: 
 		interactable.use.emit() 
-		print("yes")
 	
 	if pickup_object(): return
 	

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TrenchBroomTag" load_steps=2 format=3 uid="uid://ca7377sfgj074"]
+
+[ext_resource type="Script" uid="uid://64glfvv7eqyl" path="res://addons/func_godot/src/trenchbroom/trenchbroom_tag.gd" id="1_g1akv"]
+
+[resource]
+script = ExtResource("1_g1akv")
+tag_name = "Skip"
+tag_attributes = Array[String](["transparent"])
+tag_match_type = 0
+tag_pattern = "skip"
+texture_name = ""

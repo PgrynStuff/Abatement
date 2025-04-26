@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnnh1gdy4aq8w"]
+
+[ext_resource type="Script" uid="uid://33xmprratvvf" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_pkwu2"]
+[ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://entities/config/map_settings.tres" id="2_jq6rh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pkwu2"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_jq6rh"]
+sky_material = SubResource("ProceduralSkyMaterial_pkwu2")
+
+[sub_resource type="Environment" id="Environment_xfxcn"]
+background_mode = 2
+sky = SubResource("Sky_jq6rh")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Apartments" type="Node"]
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Environment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_xfxcn")
+
+[node name="Light" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Lights" type="Node" parent="."]
+
+[node name="Props" type="Node" parent="."]
+
+[node name="Map" type="Node3D" parent="."]
+script = ExtResource("1_pkwu2")
+map_settings = ExtResource("2_jq6rh")
+metadata/_custom_type_script = "uid://33xmprratvvf"

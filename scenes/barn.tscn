@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce75di0gg45m5"]
+
+[ext_resource type="Script" uid="uid://33xmprratvvf" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_ldo1f"]
+[ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://entities/config/map_settings.tres" id="2_d3yax"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ldo1f"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_d3yax"]
+sky_material = SubResource("ProceduralSkyMaterial_ldo1f")
+
+[sub_resource type="Environment" id="Environment_h3o0w"]
+background_mode = 2
+sky = SubResource("Sky_d3yax")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Barn" type="Node"]
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Environment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_h3o0w")
+
+[node name="Light" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Lights" type="Node" parent="."]
+
+[node name="Props" type="Node" parent="."]
+
+[node name="Map" type="Node3D" parent="."]
+script = ExtResource("1_ldo1f")
+map_settings = ExtResource("2_d3yax")
+metadata/_custom_type_script = "uid://33xmprratvvf"

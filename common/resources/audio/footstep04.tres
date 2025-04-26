@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AudioResource" load_steps=3 format=3 uid="uid://d0ko7ukwa0uo4"]
 
-[ext_resource type="AudioStream" uid="uid://bdgrjl8xn3xpb" path="res://common/clip/drywall_footstep4.wav" id="1_luv6f"]
+[ext_resource type="AudioStream" uid="uid://bdgrjl8xn3xpb" path="res://common/stream/drywall_footstep4.wav" id="1_luv6f"]
 [ext_resource type="Script" uid="uid://d0iu25h7oyxq8" path="res://scripts/resource/audio_resource.gd" id="2_yqa8h"]
 
 [resource]

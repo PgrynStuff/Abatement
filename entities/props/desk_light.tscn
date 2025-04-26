@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://df2t54l6kqvjp"]
+
+[ext_resource type="PackedScene" uid="uid://cbgh5sycrhf55" path="res://common/models/props/desk_light.glb" id="1_3o5c4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3o5c4"]
+size = Vector3(0.4, 0.5, 0.36)
+
+[node name="DeskLight" type="RigidBody3D"]
+
+[node name="OmniLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430488, -0.011)
+
+[node name="SpotLight" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.743145, 0.669131, 0, -0.669131, 0.743145, -0.00557673, 0.431315, -0.0100421)
+
+[node name="desk_light" parent="." instance=ExtResource("1_3o5c4")]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234, 0.051779)
+shape = SubResource("BoxShape3D_3o5c4")
