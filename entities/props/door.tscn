@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://xql0tlxjamff" path="res://common/models/props/door.glb" id="1_qpf2g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qpf2g"]
-size = Vector3(1.99377, 3.19946, 0.165039)
+size = Vector3(1.99377, 3.39856, 0.165039)
 
 [node name="Door" type="StaticBody3D"]
 
@@ -18,10 +18,10 @@ script = ExtResource("1_410e3")
 metadata/_custom_type_script = "uid://brlfjl48cwh2q"
 
 [node name="Collision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.996454, 0.000366211, 0.00244141)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.996454, 0.00726354, 0.00244141)
 shape = SubResource("BoxShape3D_qpf2g")
 
 [node name="door" parent="." instance=ExtResource("1_qpf2g")]
-transform = Transform3D(2.21, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0.999595, 0, 0)
+transform = Transform3D(2.21, 0, 0, 0, 1.7, 0, 0, 0, 1.6, 0.999595, 0, 0)
 
 [connection signal="use" from="InteractableComponent" to="DoorComponent" method="use"]
