@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SettingToggleResource" load_steps=2 format=3 uid="uid://glllg06uf4x7"]
+
+[ext_resource type="Script" uid="uid://csiq20b1dwcnl" path="res://scripts/resource/setting_toggle_resource.gd" id="1_2hkq1"]
+
+[resource]
+script = ExtResource("1_2hkq1")
+name = "Invert Y"
+key = "mouse_invert_y"
+value = "false"
+metadata/_custom_type_script = "uid://csiq20b1dwcnl"

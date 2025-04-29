@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://nob8rgw8vxje"]
+
+[ext_resource type="Script" uid="uid://blylrel62lob7" path="res://scripts/controller/interface_controller.gd" id="1_jngjc"]
+[ext_resource type="PackedScene" uid="uid://dbv4xx5g0sfj1" path="res://interface/main.tscn" id="2_dn18t"]
+[ext_resource type="PackedScene" uid="uid://byf3lslfwpr7f" path="res://interface/credits.tscn" id="2_ybgo5"]
+[ext_resource type="PackedScene" uid="uid://dg2ag1jg75x0s" path="res://interface/settings.tscn" id="3_hfyjf"]
+[ext_resource type="PackedScene" uid="uid://dh8urwekjards" path="res://interface/play.tscn" id="4_ew6v1"]
+
+[node name="InterfaceController" type="Node"]
+script = ExtResource("1_jngjc")
+enabled = Array[String](["Main"])
+metadata/_custom_type_script = "uid://blylrel62lob7"
+
+[node name="Settings" parent="." instance=ExtResource("3_hfyjf")]
+
+[node name="Credits" parent="." instance=ExtResource("2_ybgo5")]
+
+[node name="Play" parent="." instance=ExtResource("4_ew6v1")]
+
+[node name="Main" parent="." instance=ExtResource("2_dn18t")]

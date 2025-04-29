@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SettingCategoryResource" load_steps=3 format=3 uid="uid://br0ovodp4aq4q"]
+
+[ext_resource type="Script" uid="uid://bmeb5e1y67ujb" path="res://scripts/resource/setting_category_resource.gd" id="1_44w2y"]
+[ext_resource type="Script" uid="uid://cqusntysmdupk" path="res://scripts/resource/setting_resource.gd" id="2_0yf7j"]
+
+[resource]
+script = ExtResource("1_44w2y")
+name = ""
+setting = Array[ExtResource("2_0yf7j")]([])
+metadata/_custom_type_script = "uid://bmeb5e1y67ujb"

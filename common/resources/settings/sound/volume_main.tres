@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SettingSliderResource" load_steps=2 format=3 uid="uid://bvangmtytdted"]
+
+[ext_resource type="Script" uid="uid://dj8m5g5mh57o1" path="res://scripts/resource/setting_slider_resource.gd" id="1_0s24c"]
+
+[resource]
+script = ExtResource("1_0s24c")
+min_value = 0.0
+max_value = 0.0
+step = 0.0
+name = "Main"
+key = "volume_main"
+value = ""
+metadata/_custom_type_script = "uid://dj8m5g5mh57o1"

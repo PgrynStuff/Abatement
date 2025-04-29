@@ -124,6 +124,39 @@ shadow_enabled = true
 
 [node name="Props" type="Node" parent="."]
 
+[node name="Door" parent="Props" instance=ExtResource("5_3bgk5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.915, 1.7288, -0.255)
+
+[node name="Bed" parent="Props" instance=ExtResource("6_bwc8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6409, 2.41669, -5.70919)
+
+[node name="Cupboard" parent="Props" instance=ExtResource("7_mhx8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2763, 2.06719, -10.6027)
+
+[node name="Sofa" parent="Props" instance=ExtResource("8_65la3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9844, 1.93215, -8.17281)
+
+[node name="Wardrobe" parent="Props" instance=ExtResource("9_qcuhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2879, 2.8755, -13.9917)
+
+[node name="Door2" parent="Props" instance=ExtResource("5_3bgk5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.5751, 3.23128, -0.248774)
+
+[node name="Hammer" parent="Props" instance=ExtResource("12_7685u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29139, 0.964828, 4.95615)
+
+[node name="Trashbag" parent="Props" instance=ExtResource("13_3853c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.76629, 0.459918, 4.03261)
+
+[node name="Trashbag2" parent="Props" instance=ExtResource("13_3853c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9474, 0.459918, 3.92223)
+
+[node name="Trashbag3" parent="Props" instance=ExtResource("13_3853c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.92197, 0.459918, 3.82671)
+
+[node name="Trashbag4" parent="Props" instance=ExtResource("13_3853c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0828, 0.459919, 3.75725)
+
 [node name="Lights" type="Node" parent="."]
 
 [node name="Map" type="Node3D" parent="."]
@@ -144,36 +177,3 @@ occluder = SubResource("ArrayOccluder3D_0fn05")
 
 [node name="entity_0_collision_shape" type="CollisionShape3D" parent="Map/entity_0_worldspawn"]
 shape = SubResource("ConcavePolygonShape3D_82h1m")
-
-[node name="Door" parent="." instance=ExtResource("5_3bgk5")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.915, 1.7288, -0.255)
-
-[node name="Bed" parent="." instance=ExtResource("6_bwc8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6409, 2.41669, -5.70919)
-
-[node name="Cupboard" parent="." instance=ExtResource("7_mhx8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2763, 2.06719, -10.6027)
-
-[node name="Sofa" parent="." instance=ExtResource("8_65la3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9844, 1.93215, -8.17281)
-
-[node name="Wardrobe" parent="." instance=ExtResource("9_qcuhb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2879, 2.8755, -13.9917)
-
-[node name="Door2" parent="." instance=ExtResource("5_3bgk5")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.5751, 3.23128, -0.248774)
-
-[node name="Hammer" parent="." instance=ExtResource("12_7685u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29139, 0.964828, 4.95615)
-
-[node name="Trashbag" parent="." instance=ExtResource("13_3853c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.76629, 0.459918, 4.03261)
-
-[node name="Trashbag2" parent="." instance=ExtResource("13_3853c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9474, 0.459918, 3.92223)
-
-[node name="Trashbag3" parent="." instance=ExtResource("13_3853c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.92197, 0.459918, 3.82671)
-
-[node name="Trashbag4" parent="." instance=ExtResource("13_3853c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0828, 0.459919, 3.75725)

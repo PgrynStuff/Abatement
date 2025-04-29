@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbv4xx5g0sfj1"]
+
+[ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_1assy"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1assy")
+metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
+
+[node name="Left" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 250.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="Left"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Play"
+alignment = 0
+
+[node name="Settings" type="Button" parent="Left"]
+layout_mode = 2
+text = "Settings"
+alignment = 0
+
+[node name="Credits" type="Button" parent="Left"]
+layout_mode = 2
+text = "Credits"
+alignment = 0
+
+[node name="Exit" type="Button" parent="Left"]
+layout_mode = 2
+text = "Exit"
+alignment = 0
+
+[connection signal="pressed" from="Left/Play" to="." method="open_interface" binds= [["Main", "Play"]]]
+[connection signal="pressed" from="Left/Settings" to="." method="open_interface" binds= [["Main", "Settings"]]]
+[connection signal="pressed" from="Left/Credits" to="." method="open_interface" binds= [["Main", "Credits"]]]
