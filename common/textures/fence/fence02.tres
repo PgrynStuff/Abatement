@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://dmksafvy8yosr"]
+
+[ext_resource type="Texture2D" uid="uid://b1si5gepm407g" path="res://common/textures/fence/fence02.png" id="1_g1i8d"]
+[ext_resource type="Texture2D" uid="uid://cgp6ajmo2rssd" path="res://common/textures/fence/fence02_height.png" id="2_g1i8d"]
+[ext_resource type="Texture2D" uid="uid://dv0hp8wwghuw1" path="res://common/textures/fence/fence02_metalness.png" id="3_h7g24"]
+[ext_resource type="Texture2D" uid="uid://bs1xw5687ieb4" path="res://common/textures/fence/fence02_normal.png" id="4_jj4yy"]
+[ext_resource type="Texture2D" uid="uid://bvvcag1uuiuut" path="res://common/textures/fence/fence02_roughness.png" id="5_f84nw"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_g1i8d")
+metallic = 1.0
+metallic_texture = ExtResource("3_h7g24")
+roughness_texture = ExtResource("5_f84nw")
+normal_enabled = true
+normal_texture = ExtResource("4_jj4yy")
+heightmap_texture = ExtResource("2_g1i8d")

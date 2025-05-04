@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d3mkdlmjdjlcy"]
+
+[ext_resource type="Texture2D" uid="uid://bg7syhhgqdxwe" path="res://common/textures/styrofoam/styrofoam01.png" id="1_tnwb2"]
+[ext_resource type="Texture2D" uid="uid://dv7he5ui3vqok" path="res://common/textures/styrofoam/styrofoam01_height.png" id="2_2ha41"]
+[ext_resource type="Texture2D" uid="uid://c456bx5skijdp" path="res://common/textures/styrofoam/styrofoam01_normal.png" id="3_isqff"]
+[ext_resource type="Texture2D" uid="uid://d0onqmlhbfyqn" path="res://common/textures/styrofoam/styrofoam01_roughness.png" id="4_rnima"]
+
+[resource]
+albedo_color = Color(0.489622, 0.489622, 0.489622, 1)
+albedo_texture = ExtResource("1_tnwb2")
+roughness_texture = ExtResource("4_rnima")
+normal_enabled = true
+normal_texture = ExtResource("3_isqff")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_2ha41")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwr8o0tagcthw"]
+
+[ext_resource type="PackedScene" uid="uid://b6p1jyj0utu1l" path="res://common/models/props/toilet.glb" id="1_f242a"]
+[ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_2yii0"]
+[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="3_stifq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lv1p6"]
+size = Vector3(0.438721, 0.480988, 0.494019)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_awx2u"]
+size = Vector3(0.327057, 0.292923, 0.141296)
+
+[node name="Toilet" type="RigidBody3D"]
+
+[node name="toilet" parent="." instance=ExtResource("1_f242a")]
+
+[node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
+script = ExtResource("2_2yii0")
+component = NodePath("../DestructibleComponent")
+metadata/_custom_type_script = "uid://dvkbsd3lkesh8"
+
+[node name="DestructibleComponent" type="Node3D" parent="."]
+script = ExtResource("3_stifq")
+metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000854492, 0.201035, -0.00640869)
+shape = SubResource("BoxShape3D_lv1p6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000961304, 0.522942, -0.32547)
+shape = SubResource("BoxShape3D_awx2u")

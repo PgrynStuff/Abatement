@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhvh2327xstq1"]
+
+[ext_resource type="PackedScene" uid="uid://jtr2rlddf3x3" path="res://common/models/props/gazini_re.glb" id="1_7ofjn"]
+[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="2_yy5tl"]
+[ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="3_qj71j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ofjn"]
+size = Vector3(0.996658, 1.33492, 1.04134)
+
+[node name="Oven" type="RigidBody3D"]
+mass = 40.0
+
+[node name="gazini_re" parent="." instance=ExtResource("1_7ofjn")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="DestructibleComponent" type="Node3D" parent="."]
+script = ExtResource("2_yy5tl")
+metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
+
+[node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
+script = ExtResource("3_qj71j")
+component = NodePath("../DestructibleComponent")
+metadata/_custom_type_script = "uid://dvkbsd3lkesh8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136482, 0.226423, -0.26105)
+shape = SubResource("BoxShape3D_7ofjn")

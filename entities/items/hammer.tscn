@@ -29,6 +29,7 @@ size = Vector3(0.2, 2, 0.2)
 
 [node name="Hammer" type="RigidBody3D"]
 mass = 20.0
+continuous_cd = true
 
 [node name="InteractableComponent" type="Node" parent="."]
 script = ExtResource("3_4kkea")

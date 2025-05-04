@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dubfo1k4r64qm"]
+
+[ext_resource type="PackedScene" uid="uid://cor7rc37nf6e1" path="res://common/models/props/photorealistic_bathtub.glb" id="1_5cnqw"]
+[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="2_gnfq8"]
+[ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="3_0fa8d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iyliy"]
+size = Vector3(2.50739, 0.0851135, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3fmjn"]
+size = Vector3(2.13281, 0.640686, 0.132507)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5lcer"]
+size = Vector3(0.181164, 0.624939, 1)
+
+[node name="Bathtub" type="RigidBody3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_5cnqw")]
+
+[node name="DestructibleComponent" type="Node3D" parent="."]
+script = ExtResource("2_gnfq8")
+metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
+
+[node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
+script = ExtResource("3_0fa8d")
+component = NodePath("../DestructibleComponent")
+metadata/_custom_type_script = "uid://dvkbsd3lkesh8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202972, 0.0452423, 0)
+shape = SubResource("BoxShape3D_iyliy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174805, 0.382904, 0.482635)
+shape = SubResource("BoxShape3D_3fmjn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174805, 0.382904, -0.476491)
+shape = SubResource("BoxShape3D_3fmjn")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34063, 0.382721, 0)
+shape = SubResource("BoxShape3D_5lcer")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89942, 0.382721, 0)
+shape = SubResource("BoxShape3D_5lcer")

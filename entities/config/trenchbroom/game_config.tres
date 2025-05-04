@@ -23,5 +23,5 @@ fgd_file = ExtResource("4_1cjjo")
 entity_scale = "32"
 brush_tags = Array[Resource]([])
 brushface_tags = Array[Resource]([ExtResource("1_6f2xb"), ExtResource("2_56o1f"), ExtResource("3_agwgq")])
-default_uv_scale = Vector2(1, 1)
+default_uv_scale = Vector2(0.25, 0.25)
 game_config_version = 0

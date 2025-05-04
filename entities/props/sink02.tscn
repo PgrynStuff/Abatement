@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu2lutr8tdi5s"]
+
+[ext_resource type="PackedScene" uid="uid://ckujr3nvyfsun" path="res://common/models/props/sink02.glb" id="1_vpmae"]
+[ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_26gh6"]
+[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="3_3dwfn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i0cnk"]
+size = Vector3(0.8125, 0.329811, 0.462952)
+
+[node name="Sink01" type="RigidBody3D"]
+
+[node name="sink02" parent="." instance=ExtResource("1_vpmae")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
+script = ExtResource("2_26gh6")
+component = NodePath("../DestructibleComponent")
+metadata/_custom_type_script = "uid://dvkbsd3lkesh8"
+
+[node name="DestructibleComponent" type="Node3D" parent="."]
+script = ExtResource("3_3dwfn")
+metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00488281, -0.0425288, 0.239345)
+shape = SubResource("BoxShape3D_i0cnk")

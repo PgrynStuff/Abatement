@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=7 format=3 uid="uid://crgpdahjaj"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=8 format=3 uid="uid://crgpdahjaj"]
 
 [ext_resource type="Resource" uid="uid://cxy7jnh6d7msn" path="res://entities/config/entities/func_detail.tres" id="1_cq7s3"]
 [ext_resource type="Resource" uid="uid://b70vf4t5dc70t" path="res://entities/config/entities/func_displacement.tres" id="2_bhd4e"]
 [ext_resource type="Resource" uid="uid://dg5x44cc7flew" path="res://entities/config/entities/func_illusionary.tres" id="3_sh0se"]
 [ext_resource type="Resource" uid="uid://cx1hbtw2ebjhr" path="res://entities/config/entities/func_infected.tres" id="4_quyfq"]
 [ext_resource type="Resource" uid="uid://bdji3873bg32h" path="res://entities/config/entities/worldspawn.tres" id="5_0eof4"]
+[ext_resource type="Resource" uid="uid://ulgbfremaamu" path="res://entities/config/entities/func_door.tres" id="6_bhd4e"]
 [ext_resource type="Script" uid="uid://dank0u4tfvm08" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="6_romt7"]
 
 [resource]
@@ -13,4 +14,4 @@ export_file = false
 target_map_editor = 1
 fgd_name = "Abatement"
 base_fgd_files = Array[Resource]([])
-entity_definitions = Array[Resource]([ExtResource("1_cq7s3"), ExtResource("2_bhd4e"), ExtResource("3_sh0se"), ExtResource("4_quyfq"), ExtResource("5_0eof4")])
+entity_definitions = Array[Resource]([ExtResource("1_cq7s3"), ExtResource("2_bhd4e"), ExtResource("3_sh0se"), ExtResource("4_quyfq"), ExtResource("5_0eof4"), ExtResource("6_bhd4e")])

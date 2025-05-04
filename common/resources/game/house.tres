@@ -8,5 +8,5 @@ script = ExtResource("1_sx515")
 name = "House"
 scene = ExtResource("1_pbvxi")
 timer = 90.0
-spawn = Vector3(0, 15, 0)
+spawn = Vector3(-14.2878, 2.41777, -3.94905)
 metadata/_custom_type_script = "uid://oq127gp5v8el"

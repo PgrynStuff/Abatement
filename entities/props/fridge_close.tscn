@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqtkfcrqeo3"]
+
+[ext_resource type="PackedScene" uid="uid://dfxv3ocbixcgc" path="res://common/models/props/fridge_close.glb" id="1_1occv"]
+[ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_uhbfo"]
+[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="3_x70di"]
+[ext_resource type="PackedScene" uid="uid://chjbmeknpbglf" path="res://common/models/props/fridge_door.glb" id="4_uhbfo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ik0mt"]
+size = Vector3(0.96106, 1.87073, 0.942047)
+
+[node name="FridgeClose" type="RigidBody3D"]
+
+[node name="fridge_door" parent="." instance=ExtResource("4_uhbfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.462281)
+
+[node name="fridge_close" parent="." instance=ExtResource("1_1occv")]
+
+[node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
+script = ExtResource("2_uhbfo")
+component = NodePath("../DestructibleComponent")
+metadata/_custom_type_script = "uid://dvkbsd3lkesh8"
+
+[node name="DestructibleComponent" type="Node3D" parent="."]
+script = ExtResource("3_x70di")
+metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0194702, -0.0010376, 0.0730743)
+shape = SubResource("BoxShape3D_ik0mt")

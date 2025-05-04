@@ -49,7 +49,7 @@ size = Vector3(0.181641, 0.676865, 1.39899)
 size = Vector3(2.90796, 0.912895, 0.323006)
 
 [node name="Sofa" type="RigidBody3D"]
-mass = 60.0
+mass = 100.0
 
 [node name="DestructibleComponent" type="Node3D" parent="."]
 script = ExtResource("1_d3bjy")
@@ -58,6 +58,7 @@ metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
 
 [node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
 transform = Transform3D(3.84048e-15, -8.78599e-08, 2.01, -2.01, -8.78599e-08, -4.05366e-22, 8.78599e-08, -2.01, -8.78599e-08, 0, 0, -0.104747)
+visible = false
 mesh = SubResource("ArrayMesh_apegr")
 script = ExtResource("4_7wbwp")
 component = NodePath("../DestructibleComponent")

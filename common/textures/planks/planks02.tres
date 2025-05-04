@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://vkdyoidampub"]
+
+[ext_resource type="Texture2D" uid="uid://b7eabk3myvbyk" path="res://common/textures/planks/planks02.png" id="1_vfrwn"]
+[ext_resource type="Texture2D" uid="uid://cxynflw2fb7hh" path="res://common/textures/planks/planks02_ao.png" id="2_xs5i1"]
+[ext_resource type="Texture2D" uid="uid://bvcikwi2c47t2" path="res://common/textures/planks/planks02_height.png" id="3_5wfod"]
+[ext_resource type="Texture2D" uid="uid://bmglo4r0kqp7d" path="res://common/textures/planks/planks02_metalness.png" id="4_77x8j"]
+[ext_resource type="Texture2D" uid="uid://dygdt636rw3un" path="res://common/textures/planks/planks02_normal.png" id="5_skgt1"]
+[ext_resource type="Texture2D" uid="uid://cx12boe3ntpm0" path="res://common/textures/planks/planks02_roughness.png" id="6_3gnrq"]
+
+[resource]
+albedo_texture = ExtResource("1_vfrwn")
+metallic = 1.0
+metallic_texture = ExtResource("4_77x8j")
+roughness_texture = ExtResource("6_3gnrq")
+normal_enabled = true
+normal_texture = ExtResource("5_skgt1")
+ao_enabled = true
+ao_texture = ExtResource("2_xs5i1")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_5wfod")
