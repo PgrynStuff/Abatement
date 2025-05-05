@@ -11,7 +11,7 @@ var scene: Node
 var time: float
 var load: int
 
-enum GAME_STATUS{ Lobby, Loading, Intro, Start, Police, Outro, Finish }
+enum GAME_STATUS{ Lobby = 0, Loading = 1, Intro = 2, Start = 3, Police = 4, Outro = 5, Finish = 6 }
 signal game_status(status: GAME_STATUS)
 
 var status_police: bool

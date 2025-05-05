@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bwr8o0tagcthw"]
 
-[ext_resource type="PackedScene" uid="uid://b6p1jyj0utu1l" path="res://common/models/props/toilet.glb" id="1_f242a"]
+[ext_resource type="PackedScene" uid="uid://b4e88l7tcac8g" path="res://common/models/props/toilet.glb" id="1_f242a"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_2yii0"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="3_stifq"]
 
@@ -11,6 +11,7 @@ size = Vector3(0.438721, 0.480988, 0.494019)
 size = Vector3(0.327057, 0.292923, 0.141296)
 
 [node name="Toilet" type="RigidBody3D"]
+mass = 100.0
 
 [node name="toilet" parent="." instance=ExtResource("1_f242a")]
 

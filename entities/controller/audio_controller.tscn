@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://m72jo2q3o4vj"]
+[gd_scene load_steps=7 format=3 uid="uid://m72jo2q3o4vj"]
 
 [ext_resource type="Script" uid="uid://tefe2nkvnt81" path="res://scripts/controller/audio_controller.gd" id="1_dgkyb"]
 [ext_resource type="Script" uid="uid://d0iu25h7oyxq8" path="res://scripts/resource/audio_resource.gd" id="2_fqpaq"]
@@ -6,10 +6,9 @@
 [ext_resource type="Resource" uid="uid://demciun10kowf" path="res://common/resources/audio/footstep02.tres" id="4_4pht1"]
 [ext_resource type="Resource" uid="uid://5253b27meovb" path="res://common/resources/audio/footstep03.tres" id="5_4pht1"]
 [ext_resource type="Resource" uid="uid://d0ko7ukwa0uo4" path="res://common/resources/audio/footstep04.tres" id="6_f24xw"]
-[ext_resource type="Resource" uid="uid://htj4lyi3v3kk" path="res://common/resources/audio/tick.tres" id="7_f24xw"]
 
 [node name="AudioController" type="Node"]
 script = ExtResource("1_dgkyb")
-audio_resource = Array[ExtResource("2_fqpaq")]([ExtResource("3_618ex"), ExtResource("4_4pht1"), ExtResource("5_4pht1"), ExtResource("6_f24xw"), ExtResource("7_f24xw")])
+audio_resource = Array[ExtResource("2_fqpaq")]([ExtResource("3_618ex"), ExtResource("4_4pht1"), ExtResource("5_4pht1"), ExtResource("6_f24xw")])
 cache = 32
 metadata/_custom_type_script = "uid://tefe2nkvnt81"

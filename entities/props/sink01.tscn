@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7w3dprk2u21"]
 
-[ext_resource type="PackedScene" uid="uid://d33ea4l01s3u5" path="res://common/models/props/sink01.glb" id="1_vfv85"]
+[ext_resource type="PackedScene" uid="uid://cqe0363exurrm" path="res://common/models/props/sink01.glb" id="1_vfv85"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_vsrre"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="3_150qq"]
 
@@ -8,6 +8,7 @@
 size = Vector3(0.8125, 1.18829, 0.442505)
 
 [node name="Sink01" type="RigidBody3D"]
+mass = 50.0
 
 [node name="sink01" parent="." instance=ExtResource("1_vfv85")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)

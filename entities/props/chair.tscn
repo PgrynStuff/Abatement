@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2qd5qbmagaxu"]
 
-[ext_resource type="PackedScene" uid="uid://pdmshl48dltm" path="res://common/models/props/chair.glb" id="1_viexa"]
+[ext_resource type="PackedScene" uid="uid://cn63ure8p2vcg" path="res://common/models/props/chair.glb" id="1_viexa"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="2_4ree3"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="3_m1wxn"]
 
@@ -11,6 +11,7 @@ size = Vector3(0.603161, 0.649254, 0.577248)
 size = Vector3(0.598358, 0.658203, 0.0697021)
 
 [node name="Chair" type="RigidBody3D"]
+mass = 20.0
 
 [node name="chair2" parent="." instance=ExtResource("1_viexa")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)

@@ -1,14 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqtkfcrqeo3"]
 
-[ext_resource type="PackedScene" uid="uid://dfxv3ocbixcgc" path="res://common/models/props/fridge_close.glb" id="1_1occv"]
+[ext_resource type="PackedScene" uid="uid://ceta2g1buyodj" path="res://common/models/props/fridge_close.glb" id="1_1occv"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_uhbfo"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="3_x70di"]
-[ext_resource type="PackedScene" uid="uid://chjbmeknpbglf" path="res://common/models/props/fridge_door.glb" id="4_uhbfo"]
+[ext_resource type="PackedScene" uid="uid://w0l5to5dgn7l" path="res://common/models/props/fridge_door.glb" id="4_uhbfo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ik0mt"]
 size = Vector3(0.96106, 1.87073, 0.942047)
 
 [node name="FridgeClose" type="RigidBody3D"]
+mass = 100.0
 
 [node name="fridge_door" parent="." instance=ExtResource("4_uhbfo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.462281)

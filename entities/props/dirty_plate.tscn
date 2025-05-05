@@ -1,8 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://disfdtd4o365a"]
+[gd_scene load_steps=3 format=3 uid="uid://disfdtd4o365a"]
 
-[ext_resource type="PackedScene" uid="uid://dubxgisuhtw2b" path="res://common/models/items/dirty_plate.glb" id="1_otweu"]
-[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="2_uh85k"]
-[ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="3_r7hhn"]
+[ext_resource type="PackedScene" uid="uid://cynshibfbay6j" path="res://common/models/items/dirty_plate.glb" id="1_otweu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w1pke"]
 size = Vector3(0.438965, 0.0479736, 0.447388)
@@ -13,15 +11,6 @@ continuous_cd = true
 
 [node name="dirty_plate" parent="." instance=ExtResource("1_otweu")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
-
-[node name="DestructibleComponent" type="Node3D" parent="."]
-script = ExtResource("2_uh85k")
-metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
-
-[node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
-script = ExtResource("3_r7hhn")
-component = NodePath("../DestructibleComponent")
-metadata/_custom_type_script = "uid://dvkbsd3lkesh8"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00415039, 0.0128784, 0.000549316)

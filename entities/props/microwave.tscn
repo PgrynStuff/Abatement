@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://hrge2074wuki"]
 
-[ext_resource type="PackedScene" uid="uid://lyq4iottu7v3" path="res://common/models/props/microwave.glb" id="1_ojva8"]
+[ext_resource type="PackedScene" uid="uid://dogso17w3tq23" path="res://common/models/props/microwave.glb" id="1_ojva8"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="2_mnf3h"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="3_hd7re"]
 
@@ -8,6 +8,7 @@
 size = Vector3(0.651917, 0.371643, 0.366699)
 
 [node name="Microwave" type="RigidBody3D"]
+mass = 20.0
 
 [node name="microwave2" parent="." instance=ExtResource("1_ojva8")]
 

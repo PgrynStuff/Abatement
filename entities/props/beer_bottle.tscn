@@ -1,8 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtuxvdmsyj57x"]
+[gd_scene load_steps=3 format=3 uid="uid://dtuxvdmsyj57x"]
 
-[ext_resource type="PackedScene" uid="uid://dwbi3bxxhbbw5" path="res://common/models/props/beer_bottle.glb" id="1_4poku"]
-[ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="2_p8o6f"]
-[ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="3_8uir0"]
+[ext_resource type="PackedScene" uid="uid://58nyyn186sr3" path="res://common/models/props/beer_bottle.glb" id="1_4poku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lkpni"]
 size = Vector3(0.0829773, 0.314941, 0.105957)
@@ -10,15 +8,6 @@ size = Vector3(0.0829773, 0.314941, 0.105957)
 [node name="BeerBottle" type="RigidBody3D"]
 
 [node name="beer_bottle" parent="." instance=ExtResource("1_4poku")]
-
-[node name="DestructibleComponent" type="Node3D" parent="."]
-script = ExtResource("2_p8o6f")
-metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
-
-[node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
-script = ExtResource("3_8uir0")
-component = NodePath("../DestructibleComponent")
-metadata/_custom_type_script = "uid://dvkbsd3lkesh8"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0035553, -0.00854492, 0.000640273)

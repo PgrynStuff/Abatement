@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dubfo1k4r64qm"]
 
-[ext_resource type="PackedScene" uid="uid://cor7rc37nf6e1" path="res://common/models/props/photorealistic_bathtub.glb" id="1_5cnqw"]
+[ext_resource type="PackedScene" uid="uid://bg8yw37fc7p0q" path="res://common/models/props/photorealistic_bathtub.glb" id="1_5cnqw"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="2_gnfq8"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="3_0fa8d"]
 
@@ -14,6 +14,7 @@ size = Vector3(2.13281, 0.640686, 0.132507)
 size = Vector3(0.181164, 0.624939, 1)
 
 [node name="Bathtub" type="RigidBody3D"]
+mass = 100.0
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_5cnqw")]
 

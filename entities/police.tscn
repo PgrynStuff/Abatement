@@ -1,32 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfblhdhw75lui"]
+[gd_scene load_steps=2 format=3 uid="uid://dfblhdhw75lui"]
 
 [ext_resource type="Script" uid="uid://be1arambelpyv" path="res://scripts/component/police_component.gd" id="1_v3nib"]
-[ext_resource type="AudioStream" uid="uid://ltitxjiu2jxh" path="res://common/stream/police.mp3" id="2_ofy0q"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_v3nib"]
-
-[node name="Police" type="PathFollow3D" node_paths=PackedStringArray("light_left", "light_right", "mesh", "audio")]
+[node name="Police" type="PathFollow3D" node_paths=PackedStringArray("light_left", "light_right")]
 script = ExtResource("1_v3nib")
 light_left = NodePath("LightLeft")
 light_right = NodePath("LightRight")
-mesh = NodePath("MeshInstance3D")
-audio = NodePath("Audio")
 metadata/_custom_type_script = "uid://be1arambelpyv"
 
 [node name="LightRight" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0853, 0.832867, 0)
 light_color = Color(0, 0, 1, 1)
-light_energy = 10.77
+light_energy = 6.0
+shadow_enabled = true
 omni_range = 74.133
 
 [node name="LightLeft" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21418, 0.832867, 0)
 light_color = Color(0, 0, 1, 1)
-light_energy = 10.77
+light_energy = 6.0
+shadow_enabled = true
 omni_range = 74.133
-
-[node name="Audio" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("2_ofy0q")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_v3nib")

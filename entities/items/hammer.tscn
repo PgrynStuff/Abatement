@@ -28,6 +28,7 @@ size = Vector3(0.5, 0.2, 0.3)
 size = Vector3(0.2, 2, 0.2)
 
 [node name="Hammer" type="RigidBody3D"]
+collision_priority = 10.0
 mass = 20.0
 continuous_cd = true
 
