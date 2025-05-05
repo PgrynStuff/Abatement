@@ -1,5 +1,5 @@
 class_name InterfaceController
-extends Node
+extends Control
 
 @export var enabled: Array[String]
 var interfaces: Dictionary[String, Interface]
@@ -22,3 +22,7 @@ func open_interface(interface) -> void:
 func close_interface() -> void:
 	for node in interfaces.values():
 		node.visible = false
+
+func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		visible = !visible

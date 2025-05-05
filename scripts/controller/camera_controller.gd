@@ -9,6 +9,8 @@ var object: RigidBody3D
 
 func _ready() -> void:
 	Global.camera_controller = self
+	Global.settings_controller.setting_changed.connect(update_settings)
+	update_settings()
 
 func _process(_delta: float) -> void:
 	for child in get_children():
@@ -80,3 +82,6 @@ func get_position() -> Vector3:
 
 func set_rotation(value: Vector3) -> void:
 	camera.rotation = value
+
+func update_settings() -> void:
+	camera.fov = int(Global.settings_controller.setting["camera_fov"])

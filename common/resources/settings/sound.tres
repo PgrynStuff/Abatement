@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="SettingCategoryResource" load_steps=3 format=3 uid="uid://bukn5gl3abm7"]
+[gd_resource type="Resource" script_class="SettingCategoryResource" load_steps=7 format=3 uid="uid://bukn5gl3abm7"]
 
 [ext_resource type="Script" uid="uid://bmeb5e1y67ujb" path="res://scripts/resource/setting_category_resource.gd" id="1_ey1r4"]
 [ext_resource type="Script" uid="uid://cqusntysmdupk" path="res://scripts/resource/setting_resource.gd" id="2_ppeh6"]
+[ext_resource type="Resource" uid="uid://bvangmtytdted" path="res://common/resources/settings/sound/volume_main.tres" id="3_scgxu"]
+[ext_resource type="Resource" uid="uid://nna51bqdu4qr" path="res://common/resources/settings/sound/volume_narrator.tres" id="4_dwyht"]
+[ext_resource type="Resource" path="res://common/resources/settings/sound/volume_music.tres" id="4_slebq"]
+[ext_resource type="Resource" uid="uid://gpqviohawhk8" path="res://common/resources/settings/sound/volume_sfx.tres" id="5_slebq"]
 
 [resource]
 script = ExtResource("1_ey1r4")
-name = ""
-setting = Array[ExtResource("2_ppeh6")]([])
+name = "Dźwięk"
+settings = Array[ExtResource("2_ppeh6")]([ExtResource("3_scgxu"), ExtResource("4_slebq"), ExtResource("4_dwyht"), ExtResource("5_slebq")])
 metadata/_custom_type_script = "uid://bmeb5e1y67ujb"

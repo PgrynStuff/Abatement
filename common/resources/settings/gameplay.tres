@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="SettingCategoryResource" load_steps=3 format=3 uid="uid://br0ovodp4aq4q"]
+[gd_resource type="Resource" script_class="SettingCategoryResource" load_steps=7 format=3 uid="uid://br0ovodp4aq4q"]
 
 [ext_resource type="Script" uid="uid://bmeb5e1y67ujb" path="res://scripts/resource/setting_category_resource.gd" id="1_44w2y"]
 [ext_resource type="Script" uid="uid://cqusntysmdupk" path="res://scripts/resource/setting_resource.gd" id="2_0yf7j"]
+[ext_resource type="Resource" uid="uid://crm4s74qii33g" path="res://common/resources/settings/gameplay/camera_fov.tres" id="3_bhbw7"]
+[ext_resource type="Resource" uid="uid://c5y6pwe3sjafx" path="res://common/resources/settings/gameplay/mouse_invert_x.tres" id="4_th3om"]
+[ext_resource type="Resource" uid="uid://glllg06uf4x7" path="res://common/resources/settings/gameplay/mouse_invert_y.tres" id="5_qdmce"]
+[ext_resource type="Resource" uid="uid://dc0g523kvsrgs" path="res://common/resources/settings/gameplay/mouse_sensitivity.tres" id="6_mf55m"]
 
 [resource]
 script = ExtResource("1_44w2y")
-name = ""
-setting = Array[ExtResource("2_0yf7j")]([])
+name = "Ogólne"
+settings = Array[ExtResource("2_0yf7j")]([ExtResource("3_bhbw7"), ExtResource("4_th3om"), ExtResource("5_qdmce"), ExtResource("6_mf55m")])
 metadata/_custom_type_script = "uid://bmeb5e1y67ujb"

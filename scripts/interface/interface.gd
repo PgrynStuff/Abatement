@@ -6,3 +6,10 @@ func _ready() -> void:
 
 func open_interface(interface) -> void:
 	Global.interface_controller.open_interface(interface)
+
+func load_scenario(name: String) -> void:
+	Global.game_controller.load_scenario(name)
+	Global.interface_controller.visible = false
+
+func exit_tree() -> void:
+	get_tree().quit()

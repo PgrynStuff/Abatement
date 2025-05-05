@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://vf3kjqurqmef"]
+
+[ext_resource type="Shader" uid="uid://byotj1o7jtrvo" path="res://common/shader/crt.gdshader" id="1_u10ai"]
+
+[resource]
+shader = ExtResource("1_u10ai")
+shader_parameter/curvature = 0.02
+shader_parameter/scanline_opacity = 0.01
+shader_parameter/vignette_opacity = 0.5
+shader_parameter/chromatic_aberration = 0.01
+shader_parameter/bend_center = Vector2(0.5, 0.5)
+shader_parameter/scanline_count = 600.0
+shader_parameter/alpha = 0.5

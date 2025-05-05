@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SettingSelectResource" load_steps=2 format=3 uid="uid://rllpwjem75xj"]
+
+[ext_resource type="Script" path="res://scripts/resource/setting_select_resource.gd" id="1_ryrwg"]
+
+[resource]
+script = ExtResource("1_ryrwg")
+items = Array[String](["None", "2x", "4x", "8x"])
+name = "MSSA"
+key = "mssa"
+value = "2"
+metadata/_custom_type_script = "uid://b0houxh2catyq"

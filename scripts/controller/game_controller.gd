@@ -21,12 +21,12 @@ var status_outro: bool
 func _ready() -> void:
 	Global.game_controller = self
 	game_status.emit(GAME_STATUS.Lobby)
-	load_scenario("House")
 	
 func _physics_process(delta: float) -> void:
 	update_timer(delta)
 
 func load_scenario(name: String) -> void:
+	unload_scenario() 
 	score = 0
 	
 	game_status.emit(GAME_STATUS.Loading)
@@ -66,3 +66,4 @@ func unload_scenario() -> void:
 	status_police = false
 	status_outro = false
 	status_await = true
+	if scene: scene.queue_free()

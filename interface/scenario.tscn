@@ -1,0 +1,149 @@
+[gd_scene load_steps=2 format=3 uid="uid://r4apxuqpu8bg"]
+
+[ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_kju1j"]
+
+[node name="Scenario" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kju1j")
+metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -300.0
+offset_right = 375.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Dom Adamskich" type="Control" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Title" type="Label" parent="TabContainer/Dom Adamskich"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Dom Adamskich"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="TabContainer/Dom Adamskich"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 40.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dom adamskich to nieprzytulny budenek komunistycznej jakości "
+
+[node name="Start" type="Button" parent="TabContainer/Dom Adamskich"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Rozpocznij Scenariusz"
+
+[node name="Stodoła Pieskich" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Title" type="Label" parent="TabContainer/Stodoła Pieskich"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Stodoła Pieskich"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="TabContainer/Stodoła Pieskich"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 40.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dom adamskich to nieprzytulny budenek komunistycznej jakości "
+
+[node name="Start" type="Button" parent="TabContainer/Stodoła Pieskich"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Rozpocznij Scenariusz"
+
+[node name="Apartamenty Sołdeckich" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Title" type="Label" parent="TabContainer/Apartamenty Sołdeckich"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Apartamenty Sołdeckich"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="TabContainer/Apartamenty Sołdeckich"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 40.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dom adamskich to nieprzytulny budenek komunistycznej jakości "
+
+[node name="Start" type="Button" parent="TabContainer/Apartamenty Sołdeckich"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Rozpocznij Scenariusz"
+
+[connection signal="pressed" from="TabContainer/Dom Adamskich/Start" to="." method="load_scenario" binds= ["House"]]
+[connection signal="pressed" from="TabContainer/Stodoła Pieskich/Start" to="." method="load_scenario" binds= ["Barn"]]
+[connection signal="pressed" from="TabContainer/Apartamenty Sołdeckich/Start" to="." method="load_scenario" binds= ["Apartment"]]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SettingKeybindResource" load_steps=2 format=3 uid="uid://jryyomp5psgo"]
+
+[ext_resource type="Script" uid="uid://cq3amg1wdraq" path="res://scripts/resource/setting_keybind_resource.gd" id="1_bnmpk"]
+
+[resource]
+script = ExtResource("1_bnmpk")
+name = "character_left"
+key = "character_left"
+value = "a"
+metadata/_custom_type_script = "uid://cq3amg1wdraq"

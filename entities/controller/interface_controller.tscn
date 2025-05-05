@@ -1,20 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://nob8rgw8vxje"]
+[gd_scene load_steps=7 format=3 uid="uid://nob8rgw8vxje"]
 
+[ext_resource type="Theme" uid="uid://wssd2eq5i5h3" path="res://interface/theme.tres" id="1_hfyjf"]
 [ext_resource type="Script" uid="uid://blylrel62lob7" path="res://scripts/controller/interface_controller.gd" id="1_jngjc"]
-[ext_resource type="PackedScene" uid="uid://dbv4xx5g0sfj1" path="res://interface/main.tscn" id="2_dn18t"]
-[ext_resource type="PackedScene" uid="uid://byf3lslfwpr7f" path="res://interface/credits.tscn" id="2_ybgo5"]
-[ext_resource type="PackedScene" uid="uid://dg2ag1jg75x0s" path="res://interface/settings.tscn" id="3_hfyjf"]
-[ext_resource type="PackedScene" uid="uid://dh8urwekjards" path="res://interface/play.tscn" id="4_ew6v1"]
+[ext_resource type="PackedScene" uid="uid://yvv645f2d701" path="res://interface/main.tscn" id="2_6nlbe"]
+[ext_resource type="PackedScene" uid="uid://da6qluo6oq1lc" path="res://interface/settings.tscn" id="2_dn18t"]
+[ext_resource type="PackedScene" uid="uid://j6nfqc2tbu6c" path="res://interface/credits.tscn" id="2_ybgo5"]
+[ext_resource type="PackedScene" uid="uid://r4apxuqpu8bg" path="res://interface/scenario.tscn" id="3_hfyjf"]
 
-[node name="InterfaceController" type="Node"]
+[node name="InterfaceController" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hfyjf")
 script = ExtResource("1_jngjc")
 enabled = Array[String](["Main"])
 metadata/_custom_type_script = "uid://blylrel62lob7"
 
-[node name="Settings" parent="." instance=ExtResource("3_hfyjf")]
-
 [node name="Credits" parent="." instance=ExtResource("2_ybgo5")]
+layout_mode = 1
 
-[node name="Play" parent="." instance=ExtResource("4_ew6v1")]
+[node name="Main" parent="." instance=ExtResource("2_6nlbe")]
+layout_mode = 1
 
-[node name="Main" parent="." instance=ExtResource("2_dn18t")]
+[node name="Scenario" parent="." instance=ExtResource("3_hfyjf")]
+layout_mode = 1
+
+[node name="Settings" parent="." instance=ExtResource("2_dn18t")]
+layout_mode = 1

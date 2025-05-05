@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SettingCategoryResource" load_steps=9 format=3 uid="uid://b1yy08kxe6so2"]
+
+[ext_resource type="Script" uid="uid://bmeb5e1y67ujb" path="res://scripts/resource/setting_category_resource.gd" id="1_6qm40"]
+[ext_resource type="Script" uid="uid://cqusntysmdupk" path="res://scripts/resource/setting_resource.gd" id="2_bixu4"]
+[ext_resource type="Resource" uid="uid://davqpjrbnu3e2" path="res://common/resources/settings/controls/camera_interact.tres" id="3_rfwu5"]
+[ext_resource type="Resource" uid="uid://1xr3xowchr4o" path="res://common/resources/settings/controls/camera_throw.tres" id="4_axa0p"]
+[ext_resource type="Resource" uid="uid://d0bhie72o2gbi" path="res://common/resources/settings/controls/character_backward.tres" id="5_qaums"]
+[ext_resource type="Resource" uid="uid://bvyb6txgvejpo" path="res://common/resources/settings/controls/character_forward.tres" id="6_gs4bp"]
+[ext_resource type="Resource" uid="uid://jryyomp5psgo" path="res://common/resources/settings/controls/character_left.tres" id="7_fu3wd"]
+[ext_resource type="Resource" uid="uid://t52oajaknjn5" path="res://common/resources/settings/controls/character_right.tres" id="8_8adk5"]
+
+[resource]
+script = ExtResource("1_6qm40")
+name = "Kontrolki"
+settings = Array[ExtResource("2_bixu4")]([ExtResource("3_rfwu5"), ExtResource("4_axa0p"), ExtResource("5_qaums"), ExtResource("6_gs4bp"), ExtResource("7_fu3wd"), ExtResource("8_8adk5")])
+metadata/_custom_type_script = "uid://bmeb5e1y67ujb"

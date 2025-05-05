@@ -1,21 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://dg2ag1jg75x0s"]
+[gd_scene load_steps=3 format=3 uid="uid://da6qluo6oq1lc"]
 
 [ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_ius4u"]
+[ext_resource type="Script" uid="uid://du0qj7ftf3ahk" path="res://scripts/component/settings_component.gd" id="2_60qit"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ius4u")
 metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
 
-[node name="Panel" type="Panel" parent="."]
+[node name="SettingsComponent" type="Node" parent="." node_paths=PackedStringArray("tabs", "settings")]
+script = ExtResource("2_60qit")
+tabs = NodePath("../Tab")
+settings = NodePath("../Setting/Layout")
+metadata/_custom_type_script = "uid://du0qj7ftf3ahk"
+
+[node name="Tab" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 300.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Setting" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 300.0
 grow_horizontal = 2
 grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Layout" type="VBoxContainer" parent="Setting"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2

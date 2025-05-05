@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://byf3lslfwpr7f"]
+[gd_scene load_steps=2 format=3 uid="uid://j6nfqc2tbu6c"]
 
 [ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_8lxjy"]
 
@@ -7,36 +7,27 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8lxjy")
 metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 300.0
 grow_vertical = 2
-text = "Special Thanks Goes To:
-QAe
-Ae
-AE
-Ae 
-A"
+text = "TESTBUHVRWEBYBIHEVR
+uibbie
+rbntgnrnrnrnr
+nrt
+rnt
+nrt
+rtn
+nrt
+nrf
+"
 horizontal_alignment = 1
+vertical_alignment = 1

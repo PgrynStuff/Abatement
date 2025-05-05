@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SettingKeybindResource" load_steps=2 format=3 uid="uid://t52oajaknjn5"]
+
+[ext_resource type="Script" uid="uid://cq3amg1wdraq" path="res://scripts/resource/setting_keybind_resource.gd" id="1_3m2fd"]
+
+[resource]
+script = ExtResource("1_3m2fd")
+name = "character_right"
+key = "character_right"
+value = "d"
+metadata/_custom_type_script = "uid://cq3amg1wdraq"

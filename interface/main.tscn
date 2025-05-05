@@ -1,46 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbv4xx5g0sfj1"]
+[gd_scene load_steps=2 format=3 uid="uid://yvv645f2d701"]
 
 [ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_1assy"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 300.0
+grow_vertical = 2
+script = ExtResource("1_1assy")
+metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
+
+[node name="Content" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1assy")
-metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
-
-[node name="Left" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 250.0
-grow_vertical = 2
 alignment = 1
 
-[node name="Play" type="Button" parent="Left"]
+[node name="Scenario" type="Button" parent="Content"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Play"
-alignment = 0
+text = "Scenariusze"
 
-[node name="Settings" type="Button" parent="Left"]
+[node name="Settings" type="Button" parent="Content"]
 layout_mode = 2
-text = "Settings"
-alignment = 0
+text = "Konfiguracja"
 
-[node name="Credits" type="Button" parent="Left"]
+[node name="Credits" type="Button" parent="Content"]
 layout_mode = 2
-text = "Credits"
-alignment = 0
+text = "Prawa Autorskie"
 
-[node name="Exit" type="Button" parent="Left"]
+[node name="Terminate" type="Button" parent="Content"]
 layout_mode = 2
-text = "Exit"
-alignment = 0
+text = "Zamknij"
 
-[connection signal="pressed" from="Left/Play" to="." method="open_interface" binds= [["Main", "Play"]]]
-[connection signal="pressed" from="Left/Settings" to="." method="open_interface" binds= [["Main", "Settings"]]]
-[connection signal="pressed" from="Left/Credits" to="." method="open_interface" binds= [["Main", "Credits"]]]
+[connection signal="pressed" from="Content/Scenario" to="." method="open_interface" binds= [["Main", "Scenario"]]]
+[connection signal="pressed" from="Content/Settings" to="." method="open_interface" binds= [["Settings", "Main"]]]
+[connection signal="pressed" from="Content/Credits" to="." method="open_interface" binds= [["Main", "Credits"]]]
+[connection signal="pressed" from="Content/Terminate" to="." method="exit_tree"]

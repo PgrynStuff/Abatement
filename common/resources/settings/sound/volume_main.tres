@@ -9,5 +9,5 @@ max_value = 0.0
 step = 0.0
 name = "Main"
 key = "volume_main"
-value = ""
+value = "20"
 metadata/_custom_type_script = "uid://dj8m5g5mh57o1"

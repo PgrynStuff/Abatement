@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SettingKeybindResource" load_steps=2 format=3 uid="uid://1xr3xowchr4o"]
+
+[ext_resource type="Script" uid="uid://cq3amg1wdraq" path="res://scripts/resource/setting_keybind_resource.gd" id="1_y0nga"]
+
+[resource]
+script = ExtResource("1_y0nga")
+name = "camera_throw"
+key = "camera_throw"
+value = "q"
+metadata/_custom_type_script = "uid://cq3amg1wdraq"

@@ -1,0 +1,46 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://wssd2eq5i5h3"]
+
+[ext_resource type="FontFile" uid="uid://uxtwlji2jbs0" path="res://common/font/VT323-Regular.ttf" id="1_qajdk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qajdk"]
+bg_color = Color(0.952941, 0.611765, 0.0705882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq5ie"]
+bg_color = Color(0.952941, 0.611765, 0.0705882, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3cvr"]
+content_margin_top = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qajdk"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_qajdk"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_iq5ie"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_v3cvr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row08"]
+bg_color = Color(0.952941, 0.611765, 0.0705882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q65y7"]
+bg_color = Color(0.952941, 0.611765, 0.0705882, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wstrs"]
+color = Color(1, 1, 1, 1)
+thickness = 20
+
+[resource]
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("1_qajdk")
+Button/styles/focus = SubResource("StyleBoxFlat_qajdk")
+Button/styles/hover = SubResource("StyleBoxFlat_iq5ie")
+Button/styles/normal = SubResource("StyleBoxEmpty_v3cvr")
+Button/styles/pressed = SubResource("StyleBoxEmpty_qajdk")
+HSlider/icons/grabber = SubResource("ImageTexture_qajdk")
+HSlider/icons/grabber_disabled = SubResource("ImageTexture_iq5ie")
+HSlider/icons/grabber_highlight = SubResource("ImageTexture_v3cvr")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_row08")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_q65y7")
+HSlider/styles/slider = SubResource("StyleBoxLine_wstrs")
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("1_qajdk")

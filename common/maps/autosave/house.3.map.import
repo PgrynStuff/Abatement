@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bbe1rptvxfm3f"
+path="res://.godot/imported/house.3.map-4771040fcc1ff029e969e0d90fd177ca.tres"
+
+[deps]
+
+source_file="res://common/maps/autosave/house.3.map"
+dest_files=["res://.godot/imported/house.3.map-4771040fcc1ff029e969e0d90fd177ca.tres"]
+
+[params]
+

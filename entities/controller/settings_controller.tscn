@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://7c11ek7fs8q7" path="res://scripts/controller/settings_controller.gd" id="1_d1wxw"]
 [ext_resource type="Script" uid="uid://bmeb5e1y67ujb" path="res://scripts/resource/setting_category_resource.gd" id="2_v163v"]
-[ext_resource type="Resource" uid="uid://dw0g7bbnp6poe" path="res://common/resources/settings/controls.tres" id="3_wxbfs"]
+[ext_resource type="Resource" uid="uid://b1yy08kxe6so2" path="res://common/resources/settings/controlls.tres" id="3_v163v"]
 [ext_resource type="Resource" uid="uid://br0ovodp4aq4q" path="res://common/resources/settings/gameplay.tres" id="4_p1lah"]
 [ext_resource type="Resource" uid="uid://bukn5gl3abm7" path="res://common/resources/settings/sound.tres" id="5_ba3hd"]
 [ext_resource type="Resource" uid="uid://c8lp4opajkxoa" path="res://common/resources/settings/video.tres" id="6_d612i"]
 
 [node name="SettingsController" type="Node"]
 script = ExtResource("1_d1wxw")
-settings_categories = Array[ExtResource("2_v163v")]([ExtResource("3_wxbfs"), ExtResource("4_p1lah"), ExtResource("5_ba3hd"), ExtResource("6_d612i")])
+settings_categories = Array[ExtResource("2_v163v")]([ExtResource("3_v163v"), ExtResource("4_p1lah"), ExtResource("5_ba3hd"), ExtResource("6_d612i")])
 metadata/_custom_type_script = "uid://7c11ek7fs8q7"
