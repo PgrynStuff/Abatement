@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="1_8f4wi"]
 [ext_resource type="PackedScene" uid="uid://6hdl4xlrmsog" path="res://common/models/props/cupboard.glb" id="1_jlwdu"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_1gnng"]
-[ext_resource type="Material" uid="uid://bg1423yfp7uds" path="res://common/textures/props/infected.tres" id="2_lulqn"]
+[ext_resource type="Material" uid="uid://dqxp1a3bondyi" path="res://common/textures/asbestos.tres" id="2_lulqn"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pqdrc"]
 _surfaces = [{
@@ -44,10 +44,13 @@ size = Vector3(0.603729, 1.13138, 0.89798)
 
 [node name="Cupboard" type="RigidBody3D"]
 mass = 20.0
+continuous_cd = true
 
 [node name="DestructibleComponent" type="Node3D" parent="."]
 script = ExtResource("1_8f4wi")
 count = 2
+sfx_destruction = "wood_destruction"
+sfx_damage = Array[String](["wood01", "wood02", "wood03"])
 metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
 
 [node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]

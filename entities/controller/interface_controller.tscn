@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://nob8rgw8vxje"]
+[gd_scene load_steps=13 format=3 uid="uid://nob8rgw8vxje"]
 
 [ext_resource type="Theme" uid="uid://wssd2eq5i5h3" path="res://interface/theme.tres" id="1_hfyjf"]
 [ext_resource type="Script" uid="uid://blylrel62lob7" path="res://scripts/controller/interface_controller.gd" id="1_jngjc"]
@@ -6,8 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://da6qluo6oq1lc" path="res://interface/settings.tscn" id="2_dn18t"]
 [ext_resource type="PackedScene" uid="uid://j6nfqc2tbu6c" path="res://interface/credits.tscn" id="2_ybgo5"]
 [ext_resource type="PackedScene" uid="uid://r4apxuqpu8bg" path="res://interface/scenario.tscn" id="3_hfyjf"]
+[ext_resource type="Material" uid="uid://dsbj6n1fk8no5" path="res://common/textures/crt.tres" id="7_ew6v1"]
+[ext_resource type="PackedScene" uid="uid://bw5iacuofgxfy" path="res://interface/tween.tscn" id="8_icfki"]
+[ext_resource type="AudioStream" uid="uid://cb6ar2k4kyojd" path="res://common/stream/pc/hum.mp3" id="9_ah2bb"]
+[ext_resource type="Shader" uid="uid://dd5yivnkj5hvb" path="res://common/shader/random.gdshader" id="9_r4566"]
 
-[node name="InterfaceController" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfyjf"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d33g8"]
+shader = ExtResource("9_r4566")
+shader_parameter/min_opacity = 0.001
+shader_parameter/max_opacity = 0.07
+shader_parameter/speed = 1.0
+
+[node name="InterfaceController" type="Control" node_paths=PackedStringArray("audio")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,8 +29,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_hfyjf")
 script = ExtResource("1_jngjc")
-enabled = Array[String](["Main"])
+audio = NodePath("Audio")
+enabled = Array[String](["Main", "Tween"])
 metadata/_custom_type_script = "uid://blylrel62lob7"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfyjf")
 
 [node name="Credits" parent="." instance=ExtResource("2_ybgo5")]
 layout_mode = 1
@@ -30,3 +53,33 @@ layout_mode = 1
 
 [node name="Settings" parent="." instance=ExtResource("2_dn18t")]
 layout_mode = 1
+
+[node name="Tween" parent="." instance=ExtResource("8_icfki")]
+layout_mode = 1
+
+[node name="Crt" type="Panel" parent="."]
+material = ExtResource("7_ew6v1")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Crt"]
+process_mode = 4
+material = SubResource("ShaderMaterial_d33g8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ah2bb")
+autoplay = true
+bus = &"SFX"
+parameters/looping = true

@@ -44,4 +44,13 @@ func update_other(key: String, value: String) -> void:
 		"mssa":
 			ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_3d", int(value))
 			ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_2d", int(value))
+		"volume_main":
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), float(value))
+		"volume_music":
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), float(value))
+		"volume_narrator":
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Narrator"), float(value))
+		"volume_sfx":
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), float(value))
+			
 	ProjectSettings.save()

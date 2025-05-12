@@ -18,6 +18,7 @@ func fill(body: Node3D) -> void:
 	
 	for child in body.get_children():
 		if child is AsbestosComponent: 
+			Global.audio_controller.play_sound("bag", global_position)
 			body.queue_free()
 			counter += 1
 			update_label()

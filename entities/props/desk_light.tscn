@@ -121,6 +121,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2r6rj")
 
 [node name="DeskLight" type="RigidBody3D"]
+continuous_cd = true
 
 [node name="OmniLight" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430488, -0.011)

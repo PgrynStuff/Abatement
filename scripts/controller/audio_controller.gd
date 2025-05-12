@@ -12,7 +12,13 @@ func _ready() -> void:
 	for audio in audio_resource: load(audio.resource_path)
 	for i in cache: create_source()
 
-func play_sound(name: String, position: Vector3) -> AudioStreamPlayer3D:
+func play_sound(name, position: Vector3) -> AudioStreamPlayer3D:
+	if name is Array and name.size() == 0: return
+	if name is String and name == "": return
+	
+	if name is Array:
+		name = str(name[randi() % name.size()])
+	
 	if source_cache.is_empty():
 		push_warning("No available sources! Creating a new one.")
 		create_source()
@@ -22,6 +28,13 @@ func play_sound(name: String, position: Vector3) -> AudioStreamPlayer3D:
 		if resource.name == name: audio = resource
 	
 	var source: AudioStreamPlayer3D = source_cache.pop_back()
+	
+	match audio.bus:
+		0: source.bus = "SFX"
+		1: source.bus = "Narrator"
+		2: source.bus = "Music"
+	
+	source.emission_angle_enabled = false
 	source.position = position
 	source.stream = audio.clip
 	source.volume_db = audio.volume

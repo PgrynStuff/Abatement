@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://da6qluo6oq1lc"]
+[gd_scene load_steps=6 format=3 uid="uid://da6qluo6oq1lc"]
 
 [ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_ius4u"]
 [ext_resource type="Script" uid="uid://du0qj7ftf3ahk" path="res://scripts/component/settings_component.gd" id="2_60qit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60qit"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60qit"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+corner_detail = 1
+
+[sub_resource type="Theme" id="Theme_182cs"]
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_60qit")
+Label/styles/normal = SubResource("StyleBoxFlat_60qit")
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -11,6 +29,7 @@ anchor_bottom = 1.0
 offset_left = 300.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_182cs")
 script = ExtResource("1_ius4u")
 metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
 
@@ -18,7 +37,6 @@ metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
 script = ExtResource("2_60qit")
 tabs = NodePath("../Tab")
 settings = NodePath("../Setting/Layout")
-metadata/_custom_type_script = "uid://du0qj7ftf3ahk"
 
 [node name="Tab" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -37,7 +55,7 @@ offset_left = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
+vertical_scroll_mode = 0
 
 [node name="Layout" type="VBoxContainer" parent="Setting"]
 custom_minimum_size = Vector2(300, 0)

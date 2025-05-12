@@ -1,14 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://m72jo2q3o4vj"]
+[gd_scene load_steps=23 format=3 uid="uid://m72jo2q3o4vj"]
 
 [ext_resource type="Script" uid="uid://tefe2nkvnt81" path="res://scripts/controller/audio_controller.gd" id="1_dgkyb"]
 [ext_resource type="Script" uid="uid://d0iu25h7oyxq8" path="res://scripts/resource/audio_resource.gd" id="2_fqpaq"]
-[ext_resource type="Resource" uid="uid://bo6qutib6560m" path="res://common/resources/audio/footstep01.tres" id="3_618ex"]
-[ext_resource type="Resource" uid="uid://demciun10kowf" path="res://common/resources/audio/footstep02.tres" id="4_4pht1"]
-[ext_resource type="Resource" uid="uid://5253b27meovb" path="res://common/resources/audio/footstep03.tres" id="5_4pht1"]
-[ext_resource type="Resource" uid="uid://d0ko7ukwa0uo4" path="res://common/resources/audio/footstep04.tres" id="6_f24xw"]
+[ext_resource type="Resource" uid="uid://ba73arx4asy5e" path="res://common/resources/audio/glass/glass01.tres" id="3_civ8i"]
+[ext_resource type="Resource" uid="uid://c2w47x1xro5pa" path="res://common/resources/audio/glass/glass02.tres" id="4_edp0w"]
+[ext_resource type="Resource" uid="uid://bahfbugs4v6dj" path="res://common/resources/audio/glass/glass03.tres" id="5_j3q2e"]
+[ext_resource type="Resource" uid="uid://6n1k31nf4jiu" path="res://common/resources/audio/glass/glass_destruction.tres" id="6_8k2vj"]
+[ext_resource type="Resource" uid="uid://odl80vofosux" path="res://common/resources/audio/wood/wood01.tres" id="7_stxtq"]
+[ext_resource type="Resource" uid="uid://bwyn4ik3uof37" path="res://common/resources/audio/wood/wood02.tres" id="8_sq4d5"]
+[ext_resource type="Resource" uid="uid://nv0mtsxxqmwo" path="res://common/resources/audio/wood/wood03.tres" id="9_yhu5r"]
+[ext_resource type="Resource" uid="uid://cnxg5ber1hj3o" path="res://common/resources/audio/wood/wood_destruction.tres" id="10_8jyjd"]
+[ext_resource type="Resource" uid="uid://vxfw4ei87ey1" path="res://common/resources/audio/metal/metal01.tres" id="11_stxtq"]
+[ext_resource type="Resource" uid="uid://cmtvxqiiqpoqr" path="res://common/resources/audio/metal/metal02.tres" id="12_sq4d5"]
+[ext_resource type="Resource" uid="uid://gl4jpue4n3n" path="res://common/resources/audio/metal/metal03.tres" id="13_yhu5r"]
+[ext_resource type="Resource" uid="uid://dyrwprj55g3v" path="res://common/resources/audio/metal/metal_destruction.tres" id="14_8jyjd"]
+[ext_resource type="Resource" uid="uid://5yh2hs5r3hv5" path="res://common/resources/audio/player/player01.tres" id="15_6w1se"]
+[ext_resource type="Resource" uid="uid://dtopopwfpljyg" path="res://common/resources/audio/player/player02.tres" id="16_lx4le"]
+[ext_resource type="Resource" uid="uid://brwk7g8v5n8iq" path="res://common/resources/audio/player/player03.tres" id="17_ykfdk"]
+[ext_resource type="Resource" uid="uid://dli17u8usrbir" path="res://common/resources/audio/player/player04.tres" id="18_wqjco"]
+[ext_resource type="Resource" uid="uid://bhkiato3ollaq" path="res://common/resources/audio/pc/key.tres" id="19_lx4le"]
+[ext_resource type="Resource" uid="uid://dob6uwrilfpmk" path="res://common/resources/audio/door/door01.tres" id="20_ykfdk"]
+[ext_resource type="Resource" uid="uid://dbc0p25bmik1w" path="res://common/resources/audio/door/door02.tres" id="21_wqjco"]
+[ext_resource type="Resource" uid="uid://bs81821ai8a6t" path="res://common/resources/audio/bag/bag.tres" id="22_hyegs"]
 
 [node name="AudioController" type="Node"]
 script = ExtResource("1_dgkyb")
-audio_resource = Array[ExtResource("2_fqpaq")]([ExtResource("3_618ex"), ExtResource("4_4pht1"), ExtResource("5_4pht1"), ExtResource("6_f24xw")])
-cache = 32
+audio_resource = Array[ExtResource("2_fqpaq")]([ExtResource("3_civ8i"), ExtResource("4_edp0w"), ExtResource("5_j3q2e"), ExtResource("6_8k2vj"), ExtResource("7_stxtq"), ExtResource("8_sq4d5"), ExtResource("9_yhu5r"), ExtResource("10_8jyjd"), ExtResource("11_stxtq"), ExtResource("12_sq4d5"), ExtResource("13_yhu5r"), ExtResource("14_8jyjd"), ExtResource("15_6w1se"), ExtResource("16_lx4le"), ExtResource("17_ykfdk"), ExtResource("18_wqjco"), ExtResource("19_lx4le"), ExtResource("20_ykfdk"), ExtResource("21_wqjco"), ExtResource("22_hyegs")])
+cache = 16
 metadata/_custom_type_script = "uid://tefe2nkvnt81"

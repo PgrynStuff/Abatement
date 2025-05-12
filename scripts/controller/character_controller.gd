@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		ground_movement(delta)
 		
 		if Input.is_action_pressed("character_jump"): 
-			Global.audio_controller.play_sound(get_sound(), position)
+			Global.audio_controller.play_sound(config.sound, position)
 			velocity.y = config.jump_force
 	else:
 		airborne_movement(delta)
@@ -156,13 +156,13 @@ func footstep(delta: float) -> void:
 	timer -= delta * Vector2(velocity.x, velocity.z).length()
 	
 	if timer > 0: return
-	timer = 3
+	timer = 2.7
 	
-	Global.audio_controller.play_sound(get_sound(), position)
+	Global.audio_controller.play_sound(config.sound, position)
 
 func fall_sound() -> void:
 	if is_on_floor() && last_velocity.y < -4: 
-		Global.audio_controller.play_sound(get_sound(), position)
+		Global.audio_controller.play_sound(config.sound, position)
 	
 	last_velocity = velocity
 
@@ -171,7 +171,3 @@ func is_too_steep(normal : Vector3) -> bool:
 
 func get_speed() -> float:
 	return config.sprint_force if Input.is_action_pressed("character_sprint") else config.walk_force
-
-func get_sound() -> String:
-	var sound = ["footstep01","footstep02","footstep03","footstep04"]
-	return sound[randi() % sound.size()]

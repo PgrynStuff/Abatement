@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AudioResource" load_steps=3 format=3 uid="uid://bs81821ai8a6t"]
+
+[ext_resource type="Script" uid="uid://d0iu25h7oyxq8" path="res://scripts/resource/audio_resource.gd" id="1_ix1hi"]
+[ext_resource type="AudioStream" uid="uid://nj6uewwk7mmv" path="res://common/stream/bag/bag.MP3" id="1_p47ua"]
+
+[resource]
+script = ExtResource("1_ix1hi")
+name = "bag"
+clip = ExtResource("1_p47ua")
+volume = 0.0
+min_pitch = 1.0
+max_pitch = 1.0
+bus = 0
+metadata/_custom_type_script = "uid://d0iu25h7oyxq8"

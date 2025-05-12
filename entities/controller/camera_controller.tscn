@@ -16,6 +16,9 @@ metadata/_custom_type_script = "uid://c6u1o5t68nyj5"
 target_position = Vector3(0, 0, -2.5)
 debug_shape_custom_color = Color(0, 0, 0, 0)
 
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera"]
+current = true
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
 script = ExtResource("2_m3otb")
 current_state = NodePath("CharacterState")

@@ -14,4 +14,5 @@ ground_friction = 7.0
 airborne_acceleration = 800.0
 airborne_coefficient = 500.0
 airborne_cap = 0.85
+sound = Array[String](["player01", "player02", "player03", "player04"])
 metadata/_custom_type_script = "uid://dl3o4sjl3i8wi"

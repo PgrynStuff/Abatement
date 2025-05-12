@@ -6,6 +6,7 @@
 size = Vector3(0.0829773, 0.314941, 0.105957)
 
 [node name="BeerBottle" type="RigidBody3D"]
+continuous_cd = true
 
 [node name="beer_bottle" parent="." instance=ExtResource("1_4poku")]
 

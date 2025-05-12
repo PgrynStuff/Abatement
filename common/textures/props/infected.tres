@@ -1,8 +1,0 @@
-[gd_resource type="ORMMaterial3D" load_steps=2 format=3 uid="uid://bg1423yfp7uds"]
-
-[ext_resource type="Texture2D" uid="uid://cen466f8xumt6" path="res://common/textures/props/infected.png" id="1_ffqlv"]
-
-[resource]
-transparency = 1
-blend_mode = 4
-albedo_texture = ExtResource("1_ffqlv")

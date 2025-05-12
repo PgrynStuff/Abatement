@@ -67,3 +67,6 @@ func unload_scenario() -> void:
 	status_outro = false
 	status_await = true
 	if scene: scene.queue_free()
+	
+	for a in asbestos:
+		a.get_parent().queue_free()

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dap6ogsbb2ceu" path="res://common/models/props/desk.glb" id="1_h0adi"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="1_ty5n3"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_k11i1"]
-[ext_resource type="Material" uid="uid://bg1423yfp7uds" path="res://common/textures/props/infected.tres" id="2_pnyjf"]
+[ext_resource type="Material" uid="uid://dqxp1a3bondyi" path="res://common/textures/asbestos.tres" id="2_pnyjf"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7obqk"]
 _surfaces = [{
@@ -42,14 +42,17 @@ size = Vector3(1.1283, 0.718353, 2.11841)
 
 [node name="Desk" type="RigidBody3D"]
 mass = 20.0
+continuous_cd = true
 
 [node name="DestructibleComponent" type="Node3D" parent="."]
 script = ExtResource("1_ty5n3")
 count = 2
+sfx_destruction = "wood_destruction"
+sfx_damage = Array[String](["wood01", "wood02", "wood03"])
 metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
 
 [node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]
-transform = Transform3D(-7.03753e-08, 0, 1.61, 0, 1.61, 0, -1.61, 0, -7.03753e-08, 0, 0, 0)
+transform = Transform3D(-7.03753e-08, 0, 1.61, 0, 1.58008, 0, -1.61, 0, -7.03753e-08, 0, -0.00518096, 0)
 mesh = SubResource("ArrayMesh_pnyjf")
 script = ExtResource("2_k11i1")
 component = NodePath("../DestructibleComponent")

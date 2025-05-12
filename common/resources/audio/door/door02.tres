@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AudioResource" load_steps=3 format=3 uid="uid://dbc0p25bmik1w"]
+
+[ext_resource type="AudioStream" uid="uid://c4dhai1643ioy" path="res://common/stream/door/door02.wav" id="1_ovily"]
+[ext_resource type="Script" uid="uid://d0iu25h7oyxq8" path="res://scripts/resource/audio_resource.gd" id="2_ha28x"]
+
+[resource]
+script = ExtResource("2_ha28x")
+name = "door02"
+clip = ExtResource("1_ovily")
+volume = 0.0
+min_pitch = 1.2
+max_pitch = 0.8
+bus = 0
+metadata/_custom_type_script = "uid://d0iu25h7oyxq8"

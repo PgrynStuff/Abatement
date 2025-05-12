@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource("1_0s24c")
-min_value = 0.0
-max_value = 0.0
-step = 0.0
+min_value = -10.0
+max_value = 10.0
+step = 0.1
 name = "Main"
 key = "volume_main"
-value = "20"
+value = "0"
 metadata/_custom_type_script = "uid://dj8m5g5mh57o1"

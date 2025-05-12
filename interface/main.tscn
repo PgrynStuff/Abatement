@@ -36,7 +36,7 @@ text = "Prawa Autorskie"
 layout_mode = 2
 text = "Zamknij"
 
-[connection signal="pressed" from="Content/Scenario" to="." method="open_interface" binds= [["Main", "Scenario"]]]
-[connection signal="pressed" from="Content/Settings" to="." method="open_interface" binds= [["Settings", "Main"]]]
-[connection signal="pressed" from="Content/Credits" to="." method="open_interface" binds= [["Main", "Credits"]]]
+[connection signal="pressed" from="Content/Scenario" to="." method="open_interface" binds= [["Main", "Scenario", "Tween"]]]
+[connection signal="pressed" from="Content/Settings" to="." method="open_interface" binds= [["Settings", "Main", "Tween"]]]
+[connection signal="pressed" from="Content/Credits" to="." method="open_interface" binds= [["Main", "Credits", "Tween"]]]
 [connection signal="pressed" from="Content/Terminate" to="." method="exit_tree"]

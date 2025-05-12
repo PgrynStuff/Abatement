@@ -8,6 +8,7 @@ var open: bool
 
 func use() -> void:
 	open = !open
+	Global.audio_controller.play_sound("door01", get_parent().global_position)
 	
 	if open:
 		target.y += deg_to_rad(rotation)

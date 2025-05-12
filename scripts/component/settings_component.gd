@@ -17,6 +17,7 @@ func create_tabs() -> void:
 		var button := Button.new()
 		button.text = element.name
 		button.pressed.connect(create_settings.bind(tab_id))
+		button.pressed.connect(get_parent().open_interface.bind(["Main","Settings","Tween"]))
 		
 		tabs.add_child(button)
 		tab_id += 1
@@ -62,7 +63,11 @@ func create_settings(tab: int) -> void:
 			settings.add_child(keybind)
 
 func setting_changed(value, key: String) -> void:
+	if value is not float: play_sfx()
 	Global.settings_controller.update_setting(key, str(value))
+
+func play_sfx() -> void:
+	Global.audio_controller.play_sound("key", Global.camera_controller.get_position())
 
 func _unhandled_input(event: InputEvent) -> void:
 	if button == null:

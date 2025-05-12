@@ -15,3 +15,6 @@ extends Resource
 @export var airborne_acceleration: float = 800
 @export var airborne_coefficient: float = 500
 @export var airborne_cap: float = 0.85
+
+@export_group("Sfx")
+@export var sound: Array[String]

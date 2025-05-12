@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw5iacuofgxfy"]
+
+[ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_d7cqi"]
+[ext_resource type="Script" uid="uid://ccaduol7524jc" path="res://scripts/interface/reveal_panel.gd" id="2_bowup"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqfej"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Tween" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d7cqi")
+metadata/_custom_type_script = "uid://cgdqsdmnfrd85"
+
+[node name="RevealPanel" type="Panel" parent="." node_paths=PackedStringArray("interface")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mqfej")
+script = ExtResource("2_bowup")
+interface = NodePath("..")

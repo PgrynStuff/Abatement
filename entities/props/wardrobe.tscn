@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="1_8a7wl"]
 [ext_resource type="PackedScene" uid="uid://dobyramf75lb0" path="res://common/models/props/wardrobe.glb" id="1_ufy1b"]
-[ext_resource type="Material" uid="uid://bg1423yfp7uds" path="res://common/textures/props/infected.tres" id="2_d1c56"]
+[ext_resource type="Material" uid="uid://dqxp1a3bondyi" path="res://common/textures/asbestos.tres" id="2_d1c56"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_t4dec"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ta5ma"]
@@ -75,10 +75,13 @@ size = Vector3(0.841904, 0.0951698, 0.677795)
 
 [node name="Wardrobe" type="RigidBody3D"]
 mass = 100.0
+continuous_cd = true
 
 [node name="DestructibleComponent" type="Node3D" parent="."]
 script = ExtResource("1_8a7wl")
 count = 15
+sfx_destruction = "wood_destruction"
+sfx_damage = Array[String](["wood01", "wood02", "wood03"])
 metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
 
 [node name="InfectedComponent" type="MeshInstance3D" parent="." node_paths=PackedStringArray("component")]

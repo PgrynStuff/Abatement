@@ -1,6 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://r4apxuqpu8bg"]
+[gd_scene load_steps=8 format=3 uid="uid://r4apxuqpu8bg"]
 
 [ext_resource type="Script" uid="uid://cgdqsdmnfrd85" path="res://scripts/interface/interface.gd" id="1_kju1j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3vy8"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4thr"]
+bg_color = Color(0.952941, 0.611765, 0.0705882, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a4thr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rxyu2"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6udn"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3vy8"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0, 0, 0, 1)
+corner_detail = 1
+expand_margin_top = 4.0
 
 [node name="Scenario" type="Control"]
 layout_mode = 3
@@ -26,6 +50,12 @@ offset_right = 375.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_y3vy8")
+theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_a4thr")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a4thr")
+theme_override_styles/tab_selected = SubResource("StyleBoxEmpty_rxyu2")
+theme_override_styles/tab_hovered = SubResource("StyleBoxEmpty_o6udn")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_y3vy8")
 current_tab = 0
 
 [node name="Dom Adamskich" type="Control" parent="TabContainer"]
@@ -144,6 +174,7 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Rozpocznij Scenariusz"
 
+[connection signal="tab_changed" from="TabContainer" to="." method="open_interface_tab" binds= [["Main", "Scenario", "Tween"]]]
 [connection signal="pressed" from="TabContainer/Dom Adamskich/Start" to="." method="load_scenario" binds= ["House"]]
 [connection signal="pressed" from="TabContainer/Stodoła Pieskich/Start" to="." method="load_scenario" binds= ["Barn"]]
 [connection signal="pressed" from="TabContainer/Apartamenty Sołdeckich/Start" to="." method="load_scenario" binds= ["Apartment"]]
