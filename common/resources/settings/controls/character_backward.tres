@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_l3me1")
-name = "character_backward"
+name = "Do Tyłu"
 key = "character_backward"
 value = "s"
 metadata/_custom_type_script = "uid://cq3amg1wdraq"

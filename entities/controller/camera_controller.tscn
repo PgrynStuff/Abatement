@@ -1,8 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://m5iw5dtqrmtt"]
+[gd_scene load_steps=10 format=3 uid="uid://m5iw5dtqrmtt"]
 
 [ext_resource type="Script" uid="uid://c6u1o5t68nyj5" path="res://scripts/controller/camera_controller.gd" id="1_jhfef"]
 [ext_resource type="Script" uid="uid://dnxrwla16ocue" path="res://scripts/state/state_machine.gd" id="2_m3otb"]
 [ext_resource type="Script" uid="uid://cd531kvj31o1k" path="res://scripts/state/camera/character_state.gd" id="3_ew5bm"]
+[ext_resource type="FontFile" uid="uid://dt5k0apqcn8gs" path="res://common/font/ShadowsIntoLight-Regular.ttf" id="4_05pi1"]
+[ext_resource type="Texture2D" uid="uid://c5k8ifctnhd6j" path="res://common/textures/paper.png" id="4_gqlpa"]
+[ext_resource type="Script" uid="uid://dtkalfwuo88xj" path="res://scripts/state/camera/path_state.gd" id="4_i3f2e"]
+[ext_resource type="Script" uid="uid://dqchej6yxe4p8" path="res://scripts/component/path_follow_component.gd" id="5_j36du"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05pi1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 2
+
+[sub_resource type="Theme" id="Theme_gqlpa"]
+Label/colors/font_color = Color(0.0202229, 0.0326201, 0.347511, 0.560784)
+Label/constants/font = 0
+Label/fonts/font = ExtResource("4_05pi1")
+Panel/styles/panel = SubResource("StyleBoxFlat_05pi1")
 
 [node name="CameraController" type="Node" node_paths=PackedStringArray("camera", "interaction_ray")]
 script = ExtResource("1_jhfef")
@@ -24,6 +42,86 @@ script = ExtResource("2_m3otb")
 current_state = NodePath("CharacterState")
 metadata/_custom_type_script = "uid://dnxrwla16ocue"
 
-[node name="CharacterState" type="Node" parent="StateMachine"]
+[node name="CharacterState" type="Node" parent="StateMachine" node_paths=PackedStringArray("control", "path_follow", "timer", "azbestos", "destructables")]
 script = ExtResource("3_ew5bm")
+control = NodePath("Control")
+path_follow = NodePath("../../PathFollowComponent")
+timer = NodePath("Control/Info/VBox/Timer")
+azbestos = NodePath("Control/Info/VBox/Azbestos")
+destructables = NodePath("Control/Info/VBox/Destructables")
 metadata/_custom_type_script = "uid://cd531kvj31o1k"
+
+[node name="Control" type="Control" parent="StateMachine/CharacterState"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_gqlpa")
+
+[node name="Panel" type="Panel" parent="StateMachine/CharacterState/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Info" type="TextureRect" parent="StateMachine/CharacterState/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -219.82
+offset_right = 300.0
+offset_bottom = 80.18
+grow_vertical = 0
+texture = ExtResource("4_gqlpa")
+expand_mode = 1
+
+[node name="VBox" type="VBoxContainer" parent="StateMachine/CharacterState/Control/Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 40.0
+offset_right = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="StateMachine/CharacterState/Control/Info/VBox"]
+layout_mode = 2
+text = "Zniszcz meble zanieczyszczone 
+azbestem i usuń wszelkie ślady!
+"
+
+[node name="Timer" type="Label" parent="StateMachine/CharacterState/Control/Info/VBox"]
+layout_mode = 2
+text = "Przyjazd Policji:"
+
+[node name="Azbestos" type="Label" parent="StateMachine/CharacterState/Control/Info/VBox"]
+layout_mode = 2
+text = "Ilość Azbestu:"
+
+[node name="Destructables" type="Label" parent="StateMachine/CharacterState/Control/Info/VBox"]
+layout_mode = 2
+text = "Ilość Mebli:"
+
+[node name="PathState" type="Node" parent="StateMachine" node_paths=PackedStringArray("path_follow")]
+script = ExtResource("4_i3f2e")
+path_follow = NodePath("../../PathFollowComponent")
+metadata/_custom_type_script = "uid://dtkalfwuo88xj"
+
+[node name="PathFollowComponent" type="PathFollow3D" parent="."]
+script = ExtResource("5_j36du")
+duration = 50.0
+metadata/_custom_type_script = "uid://dqchej6yxe4p8"

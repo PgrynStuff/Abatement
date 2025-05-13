@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_aavxk")
-name = "Invert X"
+name = "Odwrócona Oś X"
 key = "mouse_invert_x"
 value = "false"
 metadata/_custom_type_script = "uid://csiq20b1dwcnl"

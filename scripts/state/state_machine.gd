@@ -13,7 +13,8 @@ func _ready() -> void:
 func state_transition(state_name: StringName) -> void:
 	var state := find_child(state_name)
 	
-	assert(state and state == current_state)
+	assert(state)
+	
 	current_state.exit()
 	current_state = state
 	current_state.enter()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://cah73t8bqjgi7"]
+[gd_scene load_steps=79 format=4 uid="uid://cah73t8bqjgi7"]
 
 [ext_resource type="Texture2D" uid="uid://drtf7teynblkn" path="res://common/textures/road_lines/road_lines01_opacity.png" id="1_3bgk5"]
 [ext_resource type="PackedScene" uid="uid://be5j158s4x0ht" path="res://entities/props/ceiling_light.tscn" id="1_p4eap"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://dfblhdhw75lui" path="res://entities/police.tscn" id="35_80gfe"]
 [ext_resource type="PackedScene" uid="uid://cjcyoxql1u0sy" path="res://entities/items/hammer.tscn" id="36_in3qe"]
 [ext_resource type="PackedScene" uid="uid://dxlaqflvcp45u" path="res://entities/items/trashbag.tscn" id="37_m31jp"]
+[ext_resource type="Script" uid="uid://ybde8iia78hp" path="res://scripts/component/path_component.gd" id="38_m31jp"]
 
 [sub_resource type="Environment" id="Environment_se78b"]
 background_mode = 2
@@ -765,6 +766,13 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="Curve3D" id="Curve3D_kn7tx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.66709, 0.00012207, -0.145652, 0, 0, 0, 0, 0, 0, -10.5556, 0.000732422, -0.819383, 0, 0, 0, 0, 0, 0, -18.6245, 0.0020752, -2.51971, 0, 0, 0, 0, 0, 0, -22.6878, 0.00268555, -3.39819, 0, 0, 0, 0, 0, 0, -28.4159, 0.00427246, -5.23319, 0, 0, 0, 0, 0, 0, -31.8598, 0.0057373, -7.14525, 0, 0, 0, 0, 0, 0, -34.1759, 0.00866699, -10.7237),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
 [node name="House" type="Node"]
 
 [node name="Items" type="Node" parent="."]
@@ -1326,3 +1334,9 @@ curve = SubResource("Curve3D_p4eap")
 
 [node name="Police" parent="Path3D2" instance=ExtResource("35_80gfe")]
 transform = Transform3D(-0.877263, 0, 0.480009, 0, 1, 0, -0.480009, 0, -0.877263, -2.42817, 0, 4.72129)
+
+[node name="PathComponent" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+curve = SubResource("Curve3D_kn7tx")
+script = ExtResource("38_m31jp")
+metadata/_custom_type_script = "uid://ybde8iia78hp"

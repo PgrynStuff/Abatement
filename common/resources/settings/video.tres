@@ -6,6 +6,6 @@
 
 [resource]
 script = ExtResource("1_fcbtl")
-name = "Video "
+name = "Wideo "
 settings = Array[ExtResource("2_ntu7g")]([ExtResource("3_ntu7g")])
 metadata/_custom_type_script = "uid://bmeb5e1y67ujb"

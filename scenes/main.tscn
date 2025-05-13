@@ -11,9 +11,9 @@
 
 [node name="SettingsController" parent="." instance=ExtResource("1_tefeu")]
 
-[node name="AudioController" parent="." instance=ExtResource("1_jkv2x")]
-
 [node name="CameraController" parent="." instance=ExtResource("2_jbj1t")]
+
+[node name="AudioController" parent="." instance=ExtResource("1_jkv2x")]
 
 [node name="CharacterController" parent="." instance=ExtResource("3_muem4")]
 

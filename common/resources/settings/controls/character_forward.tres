@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_vqcbc")
-name = "character_forward"
+name = "Do Przodu"
 key = "character_forward"
 value = "w"
 metadata/_custom_type_script = "uid://cq3amg1wdraq"

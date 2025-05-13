@@ -11,6 +11,6 @@
 
 [resource]
 script = ExtResource("1_6qm40")
-name = "Kontrolki"
+name = "Klawiatura"
 settings = Array[ExtResource("2_bixu4")]([ExtResource("3_rfwu5"), ExtResource("4_axa0p"), ExtResource("5_qaums"), ExtResource("6_gs4bp"), ExtResource("7_fu3wd"), ExtResource("8_8adk5")])
 metadata/_custom_type_script = "uid://bmeb5e1y67ujb"

@@ -85,3 +85,6 @@ func set_rotation(value: Vector3) -> void:
 
 func update_settings() -> void:
 	camera.fov = int(Global.settings_controller.setting["camera_fov"])
+
+func get_state(name: String) -> State:
+	return get_node("StateMachine/" + str(name))

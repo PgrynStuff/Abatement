@@ -19,15 +19,13 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 300.0
 grow_vertical = 2
-text = "TESTBUHVRWEBYBIHEVR
-uibbie
-rbntgnrnrnrnr
-nrt
-rnt
-nrt
-rtn
-nrt
-nrf
-"
+text = "Programowanie:
+Ja
+
+Narrator:
+Ten tam
+
+Mapy:
+Ten tam"
 horizontal_alignment = 1
 vertical_alignment = 1

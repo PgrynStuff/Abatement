@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_y0nga")
-name = "camera_throw"
+name = "Rzut"
 key = "camera_throw"
 value = "q"
 metadata/_custom_type_script = "uid://cq3amg1wdraq"

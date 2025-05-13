@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_3m2fd")
-name = "character_right"
+name = "W Prawo"
 key = "character_right"
 value = "d"
 metadata/_custom_type_script = "uid://cq3amg1wdraq"
