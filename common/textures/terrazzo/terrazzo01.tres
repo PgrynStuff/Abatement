@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://seef1egtej85"]
+
+[ext_resource type="Texture2D" uid="uid://b5xbrx08iwyj7" path="res://common/textures/terrazzo/terrazzo01.png" id="1_ukldg"]
+[ext_resource type="Texture2D" uid="uid://bfd7k71t2up4s" path="res://common/textures/terrazzo/terrazzo01_height.png" id="2_exq6o"]
+[ext_resource type="Texture2D" uid="uid://2taa02712vpt" path="res://common/textures/terrazzo/terrazzo01_normal.png" id="3_uq5bl"]
+[ext_resource type="Texture2D" uid="uid://bk6dtsw4k78j8" path="res://common/textures/terrazzo/terrazzo01_roughness.png" id="4_c3tkd"]
+
+[resource]
+albedo_texture = ExtResource("1_ukldg")
+roughness_texture = ExtResource("4_c3tkd")
+normal_enabled = true
+normal_texture = ExtResource("3_uq5bl")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_exq6o")

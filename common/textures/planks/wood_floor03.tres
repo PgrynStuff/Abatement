@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cyy6t763cpsdj"]
+
+[ext_resource type="Texture2D" uid="uid://byljp2o6gy0kq" path="res://common/textures/planks/wood_floor03.png" id="1_sl6xs"]
+[ext_resource type="Texture2D" uid="uid://dx86c6yp0seka" path="res://common/textures/planks/wood_floor03_height.png" id="2_crarw"]
+[ext_resource type="Texture2D" uid="uid://cijl703qos0kb" path="res://common/textures/planks/wood_floor03_normal.png" id="3_b1ibk"]
+[ext_resource type="Texture2D" uid="uid://bbnm8hixv0wjl" path="res://common/textures/planks/wood_floor03_roughness.png" id="4_xo841"]
+
+[resource]
+albedo_texture = ExtResource("1_sl6xs")
+roughness_texture = ExtResource("4_xo841")
+normal_enabled = true
+normal_texture = ExtResource("3_b1ibk")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_crarw")
