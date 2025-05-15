@@ -12,7 +12,12 @@ func _enter_tree() -> void:
 	Global.settings_controller.setting_changed.connect(update_settings)
 
 func _ready() -> void:
+	Global.game_controller.game_status.connect(end_game)
 	update_settings()
+
+func end_game(status) -> void:
+	if status != 5: return
+	drop_object()
 
 func _process(_delta: float) -> void:
 	for child in get_children():
