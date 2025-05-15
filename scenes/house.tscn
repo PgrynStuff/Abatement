@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=4 uid="uid://cah73t8bqjgi7"]
+[gd_scene load_steps=85 format=4 uid="uid://cah73t8bqjgi7"]
 
 [ext_resource type="Texture2D" uid="uid://drtf7teynblkn" path="res://common/textures/road_lines/road_lines01_opacity.png" id="1_3bgk5"]
 [ext_resource type="PackedScene" uid="uid://be5j158s4x0ht" path="res://entities/props/ceiling_light.tscn" id="1_p4eap"]
@@ -38,11 +38,12 @@
 [ext_resource type="PackedScene" uid="uid://cjcyoxql1u0sy" path="res://entities/items/hammer.tscn" id="36_in3qe"]
 [ext_resource type="PackedScene" uid="uid://dxlaqflvcp45u" path="res://entities/items/trashbag.tscn" id="37_m31jp"]
 [ext_resource type="Script" uid="uid://ybde8iia78hp" path="res://scripts/component/path_component.gd" id="38_m31jp"]
-[ext_resource type="Script" path="res://scripts/controller/narrator_controller.gd" id="39_kn7tx"]
-[ext_resource type="AudioStream" uid="uid://cb6ar2k4kyojd" path="res://common/stream/pc/hum.mp3" id="39_xdv06"]
-[ext_resource type="AudioStream" uid="uid://drjalc2ctltbr" path="res://common/stream/ambiance/town_ambience.ogg" id="41_a0083"]
-[ext_resource type="AudioStream" uid="uid://d3uxehfkgatwx" path="res://common/stream/ambiance/town_cars.ogg" id="42_idhyc"]
-[ext_resource type="AudioStream" uid="uid://du1804agy6o6" path="res://common/stream/music/Jetski - Telecasted.mp3" id="43_idhyc"]
+[ext_resource type="AudioStream" uid="uid://dqiqtrojx88bd" path="res://common/stream/recoding/greeting_house.mp3" id="39_idhyc"]
+[ext_resource type="Script" uid="uid://oy3dr6mje8ae" path="res://scripts/controller/narrator_controller.gd" id="39_kn7tx"]
+[ext_resource type="AudioStream" uid="uid://b2ks4gxogi7g3" path="res://common/stream/ambiance/town_ambience.ogg" id="41_a0083"]
+[ext_resource type="AudioStream" uid="uid://dxhii4fu2cnbt" path="res://common/stream/ambiance/town_cars.ogg" id="42_idhyc"]
+[ext_resource type="AudioStream" uid="uid://dppiycpqpmev" path="res://common/stream/music/Jetski - Telecasted.mp3" id="43_idhyc"]
+[ext_resource type="AudioStream" uid="uid://bgmxitsy1asrf" path="res://common/stream/recoding/police_warnig.mp3" id="44_nlkie"]
 
 [sub_resource type="Environment" id="Environment_se78b"]
 background_mode = 2
@@ -1347,7 +1348,8 @@ script = ExtResource("38_m31jp")
 metadata/_custom_type_script = "uid://ybde8iia78hp"
 
 [node name="NarratorController" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("39_xdv06")
+stream = ExtResource("39_idhyc")
+volume_db = 5.0
 bus = &"Narrator"
 script = ExtResource("39_kn7tx")
 trigger = 2
@@ -1370,3 +1372,10 @@ parameters/looping = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("43_idhyc")
 autoplay = true
+bus = &"Music"
+
+[node name="NarratorController2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_nlkie")
+script = ExtResource("39_kn7tx")
+trigger = 4
+metadata/_custom_type_script = "uid://oy3dr6mje8ae"

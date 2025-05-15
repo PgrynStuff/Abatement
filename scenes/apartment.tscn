@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://dnnh1gdy4aq8w"]
+[gd_scene load_steps=49 format=4 uid="uid://dnnh1gdy4aq8w"]
 
 [ext_resource type="Script" uid="uid://33xmprratvvf" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_pkwu2"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://entities/config/map_settings.tres" id="2_jq6rh"]
@@ -28,9 +28,15 @@
 [ext_resource type="PackedScene" uid="uid://cjcyoxql1u0sy" path="res://entities/items/hammer.tscn" id="25_k6ur2"]
 [ext_resource type="PackedScene" uid="uid://dxlaqflvcp45u" path="res://entities/items/trashbag.tscn" id="26_x6kym"]
 [ext_resource type="PackedScene" uid="uid://dfblhdhw75lui" path="res://entities/police.tscn" id="28_kfc2r"]
-[ext_resource type="AudioStream" uid="uid://d3uxehfkgatwx" path="res://common/stream/ambiance/town_cars.ogg" id="29_dpm58"]
-[ext_resource type="AudioStream" uid="uid://drjalc2ctltbr" path="res://common/stream/ambiance/town_ambience.ogg" id="29_efgw4"]
-[ext_resource type="AudioStream" uid="uid://b6lcps6gh0tju" path="res://common/stream/music/No Combat - Telecasted.mp3" id="31_yko34"]
+[ext_resource type="AudioStream" uid="uid://dxhii4fu2cnbt" path="res://common/stream/ambiance/town_cars.ogg" id="29_dpm58"]
+[ext_resource type="AudioStream" uid="uid://b2ks4gxogi7g3" path="res://common/stream/ambiance/town_ambience.ogg" id="29_efgw4"]
+[ext_resource type="AudioStream" uid="uid://dqc1f2mlvt2v7" path="res://common/stream/music/No Combat - Telecasted.mp3" id="31_yko34"]
+[ext_resource type="PackedScene" uid="uid://be5j158s4x0ht" path="res://entities/props/ceiling_light.tscn" id="32_ir2lg"]
+[ext_resource type="AudioStream" uid="uid://bgmxitsy1asrf" path="res://common/stream/recoding/police_warnig.mp3" id="32_r5cbp"]
+[ext_resource type="Script" uid="uid://oy3dr6mje8ae" path="res://scripts/controller/narrator_controller.gd" id="33_ku2ky"]
+[ext_resource type="PackedScene" uid="uid://df2t54l6kqvjp" path="res://entities/props/desk_light.tscn" id="33_q2vut"]
+[ext_resource type="AudioStream" uid="uid://dur77rj0x4tu2" path="res://common/stream/recoding/greetings_apartment.mp3" id="34_ku2ky"]
+[ext_resource type="PackedScene" uid="uid://dogso17w3tq23" path="res://common/models/props/microwave.glb" id="37_d766b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pkwu2"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -195,21 +201,21 @@ _surfaces = [{
 
 [sub_resource type="Curve3D" id="Curve3D_wsv48"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.0656738, 1.50114, 0.0147542, 0, 0, 0, 0, 0, 0, 0.00964355, 6.55422, 11.0431, 0, 0, 0, 0, 0, 0, 100, 6.554, 10.976),
-"tilts": PackedFloat32Array(0, 0.42, 0.485512)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.0656738, 1.50114, 0.0147542, 0, 0, 0, 0, 0, 0, 0.00964355, 6.55422, 11.0431, 0, 0, 0, 0, 0, 0, 20.8881, 6.554, 10.976, 0, 0, 0, 0, 0, 0, 20.8753, 12.5323, 10.976, 0, 0, 0, 0, 0, 0, 8.81463, 12.7296, 10.976),
+"tilts": PackedFloat32Array(-0.0539144, 0.00317756, 0.572844, -2.31777, -2.90741)
 }
-point_count = 3
+point_count = 5
 
 [sub_resource type="Curve3D" id="Curve3D_efgw4"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.4306, 0.311035, 34.7665, 0, 0, 0, 0, 0, 0, 39.825, 0.311035, 34.886),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -40.1875, 0.130371, 34.7665, 0, 0, 0, 0, 0, 0, 39.825, 0.311035, 34.886),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_kfc2r"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.97, -9.50696, -7.98462, 0, 0, 0, 0, 0, 0, 24.1425, -9.50696, -7.92483),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -40.808, -9.51945, -7.98462, 0, 0, 0, 0, 0, 0, 24.1425, -9.50696, -7.92483),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -259,13 +265,13 @@ metadata/_custom_type_script = "uid://ybde8iia78hp"
 curve = SubResource("Curve3D_efgw4")
 
 [node name="Police" parent="Path3D" instance=ExtResource("28_kfc2r")]
-transform = Transform3D(-0.00228695, 0, -0.999997, 0, 1, 0, 0.999997, 0, -0.00228695, -12.4306, 0.311035, 34.7665)
+transform = Transform3D(-0.00149397, -0.00225793, -0.999995, -2.3283e-10, 0.999996, -0.00225794, 0.999998, -3.37307e-06, -0.00149397, -40.1875, 0.130371, 34.7665)
 
 [node name="Path3D2" type="Path3D" parent="."]
 curve = SubResource("Curve3D_kfc2r")
 
 [node name="Police" parent="Path3D2" instance=ExtResource("28_kfc2r")]
-transform = Transform3D(-0.00165586, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00165586, -11.97, -9.50696, -7.98462)
+transform = Transform3D(-0.000920457, -0.000192319, -0.999998, 7.27594e-12, 0.999998, -0.000192319, 0.999997, -1.77029e-07, -0.000920457, -40.808, -9.51945, -7.98462)
 
 [node name="Props" type="Node" parent="."]
 
@@ -456,3 +462,80 @@ parameters/looping = true
 stream = ExtResource("31_yko34")
 autoplay = true
 bus = &"Music"
+
+[node name="NarratorController" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_r5cbp")
+bus = &"Narrator"
+script = ExtResource("33_ku2ky")
+trigger = 4
+metadata/_custom_type_script = "uid://oy3dr6mje8ae"
+
+[node name="NarratorController2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_ku2ky")
+volume_db = 5.0
+bus = &"Narrator"
+script = ExtResource("33_ku2ky")
+trigger = 2
+metadata/_custom_type_script = "uid://oy3dr6mje8ae"
+
+[node name="props" type="Node3D" parent="."]
+
+[node name="CeilingLight" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.31005, 12.5162, 2.90913)
+
+[node name="CeilingLight2" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.78376, 7.53204, 10.619)
+
+[node name="CeilingLight3" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485088, 7.53204, 10.619)
+
+[node name="CeilingLight17" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485088, 7.48775, -1.0556)
+
+[node name="CeilingLight18" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.26047, 7.48775, -1.0556)
+
+[node name="CeilingLight4" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97704, 7.93355, 10.8506)
+
+[node name="CeilingLight6" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97704, 7.93355, 19.1185)
+
+[node name="CeilingLight7" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7399, 7.93355, 25.4284)
+
+[node name="CeilingLight8" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9758, 7.82645, 24.0921)
+
+[node name="CeilingLight5" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0632, 7.93355, 11.333)
+
+[node name="CeilingLight12" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0904, 14.9947, 11.333)
+
+[node name="CeilingLight15" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2527, 14.4889, 11.333)
+
+[node name="CeilingLight16" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3656, 14.9471, 16.5536)
+
+[node name="CeilingLight14" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4464, 14.9999, 17.3244)
+
+[node name="CeilingLight13" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8604, 14.9873, 11.333)
+
+[node name="CeilingLight9" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1282, 7.93355, 15.7486)
+
+[node name="CeilingLight10" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1282, 7.93355, 5.54069)
+
+[node name="CeilingLight11" parent="props" instance=ExtResource("32_ir2lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.34106, 7.95883, 5.60866)
+
+[node name="DeskLight" parent="props" instance=ExtResource("33_q2vut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3489, 4.03974, 12.5749)
+
+[node name="microwave2" parent="." instance=ExtResource("37_d766b")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.09225, 5.68172, 20.4686)
