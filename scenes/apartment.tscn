@@ -265,13 +265,13 @@ metadata/_custom_type_script = "uid://ybde8iia78hp"
 curve = SubResource("Curve3D_efgw4")
 
 [node name="Police" parent="Path3D" instance=ExtResource("28_kfc2r")]
-transform = Transform3D(-0.00149397, -0.00225793, -0.999995, -2.3283e-10, 0.999996, -0.00225794, 0.999998, -3.37307e-06, -0.00149397, -40.1875, 0.130371, 34.7665)
+transform = Transform3D(-0.00149361, -0.00225793, -0.999995, -1.16415e-10, 0.999996, -0.00225794, 0.999998, -3.37237e-06, -0.00149361, -40.1875, 0.130371, 34.7665)
 
 [node name="Path3D2" type="Path3D" parent="."]
 curve = SubResource("Curve3D_kfc2r")
 
 [node name="Police" parent="Path3D2" instance=ExtResource("28_kfc2r")]
-transform = Transform3D(-0.000920457, -0.000192319, -0.999998, 7.27594e-12, 0.999998, -0.000192319, 0.999997, -1.77029e-07, -0.000920457, -40.808, -9.51945, -7.98462)
+transform = Transform3D(-0.000920456, -0.000192304, -0.999998, 2.18278e-11, 0.999998, -0.000192304, 0.999997, -1.7703e-07, -0.000920457, -40.808, -9.51945, -7.98462)
 
 [node name="Props" type="Node" parent="."]
 
@@ -460,6 +460,7 @@ parameters/looping = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_yko34")
+volume_db = -10.0
 autoplay = true
 bus = &"Music"
 
@@ -472,7 +473,7 @@ metadata/_custom_type_script = "uid://oy3dr6mje8ae"
 
 [node name="NarratorController2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("34_ku2ky")
-volume_db = 5.0
+volume_db = 7.0
 bus = &"Narrator"
 script = ExtResource("33_ku2ky")
 trigger = 2
