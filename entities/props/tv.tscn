@@ -8,6 +8,7 @@
 size = Vector3(1.32309, 0.8223, 0.214722)
 
 [node name="Tv" type="RigidBody3D"]
+mass = 40.0
 
 [node name="tv1" parent="." instance=ExtResource("1_kalcm")]
 
