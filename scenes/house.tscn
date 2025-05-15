@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://cah73t8bqjgi7"]
+[gd_scene load_steps=84 format=4 uid="uid://cah73t8bqjgi7"]
 
 [ext_resource type="Texture2D" uid="uid://drtf7teynblkn" path="res://common/textures/road_lines/road_lines01_opacity.png" id="1_3bgk5"]
 [ext_resource type="PackedScene" uid="uid://be5j158s4x0ht" path="res://entities/props/ceiling_light.tscn" id="1_p4eap"]
@@ -38,8 +38,11 @@
 [ext_resource type="PackedScene" uid="uid://cjcyoxql1u0sy" path="res://entities/items/hammer.tscn" id="36_in3qe"]
 [ext_resource type="PackedScene" uid="uid://dxlaqflvcp45u" path="res://entities/items/trashbag.tscn" id="37_m31jp"]
 [ext_resource type="Script" uid="uid://ybde8iia78hp" path="res://scripts/component/path_component.gd" id="38_m31jp"]
-[ext_resource type="Script" uid="uid://oy3dr6mje8ae" path="res://scripts/controller/narrator_controller.gd" id="39_kn7tx"]
+[ext_resource type="Script" path="res://scripts/controller/narrator_controller.gd" id="39_kn7tx"]
 [ext_resource type="AudioStream" uid="uid://cb6ar2k4kyojd" path="res://common/stream/pc/hum.mp3" id="39_xdv06"]
+[ext_resource type="AudioStream" uid="uid://drjalc2ctltbr" path="res://common/stream/ambiance/town_ambience.ogg" id="41_a0083"]
+[ext_resource type="AudioStream" uid="uid://d3uxehfkgatwx" path="res://common/stream/ambiance/town_cars.ogg" id="42_idhyc"]
+[ext_resource type="AudioStream" uid="uid://du1804agy6o6" path="res://common/stream/music/Jetski - Telecasted.mp3" id="43_idhyc"]
 
 [sub_resource type="Environment" id="Environment_se78b"]
 background_mode = 2
@@ -1324,14 +1327,14 @@ mesh = SubResource("ArrayMesh_4hirc")
 shape = SubResource("ConcavePolygonShape3D_we5ds")
 
 [node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.4899, 2.07902, -21.5372)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.4899, 3.44153, -21.5372)
 curve = SubResource("Curve3D_p4eap")
 
 [node name="Police" parent="Path3D" instance=ExtResource("35_80gfe")]
 transform = Transform3D(-0.877263, 0, 0.480009, 0, 1, 0, -0.480009, 0, -0.877263, -2.42817, 0, 4.72129)
 
 [node name="Path3D2" type="Path3D" parent="."]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -102.25, 2.07902, -22.1324)
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -102.25, 3.44153, -22.1324)
 curve = SubResource("Curve3D_p4eap")
 
 [node name="Police" parent="Path3D2" instance=ExtResource("35_80gfe")]
@@ -1348,4 +1351,22 @@ stream = ExtResource("39_xdv06")
 bus = &"Narrator"
 script = ExtResource("39_kn7tx")
 trigger = 2
-metadata/_custom_type_script = "uid://oy3dr6mje8ae"
+
+[node name="AmbientTown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("41_a0083")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="AmbientCars" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.2299, 0, 1.17592)
+stream = ExtResource("42_idhyc")
+volume_db = -15.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_idhyc")
+autoplay = true

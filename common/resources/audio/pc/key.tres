@@ -7,7 +7,7 @@
 script = ExtResource("1_i3luk")
 name = "key"
 clip = ExtResource("1_g1ucr")
-volume = 0.0
+volume = 1.0
 min_pitch = 1.5
 max_pitch = 0.5
 bus = 0

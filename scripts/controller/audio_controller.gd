@@ -7,8 +7,10 @@ extends Node
 var source_cache: Array[AudioStreamPlayer3D]
 var active_cache: Array[AudioStreamPlayer3D]
 
-func _ready() -> void:
+func _enter_tree() -> void:
 	Global.audio_controller = self
+
+func _ready() -> void:
 	for audio in audio_resource: load(audio.resource_path)
 	for i in cache: create_source()
 

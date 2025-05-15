@@ -58,21 +58,21 @@ theme_override_styles/tab_hovered = SubResource("StyleBoxEmpty_o6udn")
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_y3vy8")
 current_tab = 0
 
-[node name="Dom Adamskich" type="Control" parent="TabContainer"]
+[node name="Dom Dziadka Z Wermachtu" type="Control" parent="TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Title" type="Label" parent="TabContainer/Dom Adamskich"]
+[node name="Title" type="Label" parent="TabContainer/Dom Dziadka Z Wermachtu"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
-text = "Dom Adamskich"
+text = "Dom Dziadka Z Wermachtu"
 vertical_alignment = 1
 
-[node name="Description" type="Label" parent="TabContainer/Dom Adamskich"]
+[node name="Description" type="Label" parent="TabContainer/Dom Dziadka Z Wermachtu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -81,9 +81,12 @@ offset_top = 40.0
 offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Dom adamskich to nieprzytulny budenek komunistycznej jakości "
+text = "Mieszkanie zostało wybudowane przez dziadka Zbyszka podczas PRLu który uważa siebie za genialną złotą rączkę (spojler tak nie jest) dziadek podczas jego budowy stwierdził że azbest to cudowny materiał co spowodowało użycie azbestu w infrastrukturze wodnej dachu czy nawet w ścianach mawiał on żę azbest jest duszą i ciałem jego domu.
+Niestety dziadek po 2 latach mieszkania w nim zmarł obecenie posiada go twój brat który dostał go po ojcu który zmarł na raka płuc. Twoja siostra jest tym bardzo zaniepokojona że twój brat w nim mieszka i nakłania cię do zdemolowania domu aby brat nie mógł w nim mieszkać."
+autowrap_mode = 2
+text_overrun_behavior = 4
 
-[node name="Start" type="Button" parent="TabContainer/Dom Adamskich"]
+[node name="Start" type="Button" parent="TabContainer/Dom Dziadka Z Wermachtu"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -96,22 +99,22 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Rozpocznij Scenariusz"
 
-[node name="Apartamenty Sołdeckich" type="Control" parent="TabContainer"]
+[node name="Apartamenty Nowy Pieńkowski" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Title" type="Label" parent="TabContainer/Apartamenty Sołdeckich"]
+[node name="Title" type="Label" parent="TabContainer/Apartamenty Nowy Pieńkowski"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
-text = "Apartamenty Sołdeckich"
+text = "Apartamenty Nowy Pieńkowski"
 vertical_alignment = 1
 
-[node name="Description" type="Label" parent="TabContainer/Apartamenty Sołdeckich"]
+[node name="Description" type="Label" parent="TabContainer/Apartamenty Nowy Pieńkowski"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -120,9 +123,11 @@ offset_top = 40.0
 offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Dom adamskich to nieprzytulny budenek komunistycznej jakości "
+text = "Zbudowane podczas PRLu typowe polskie osiedle z tym zastrzeżeniem że podczas budowy użyto więcej niż planowano azbestu ze względu na braki w materiałach konstrukcyjnych. Decyzja ta spowodowała że społeczność osiedlowa szybko się zmniejszała ze względu na plagę raka płuc i chorób układu oddechowego która spadła na nią niedługo po oddaniu ostatniego mieszkania do użytku. Przez następne lata osiedle zostało zdewastowane przez polskich majstrów i meneli wkradających się do niego. Do dziś krąży o nim wiele plotek i legend miejskich a mieszkańcy okolic są nim zaniepokojeni a niektórzy wręcz zbulwersowani jego istnieniem. "
+autowrap_mode = 2
+text_overrun_behavior = 4
 
-[node name="Start" type="Button" parent="TabContainer/Apartamenty Sołdeckich"]
+[node name="Start" type="Button" parent="TabContainer/Apartamenty Nowy Pieńkowski"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -136,5 +141,5 @@ grow_vertical = 0
 text = "Rozpocznij Scenariusz"
 
 [connection signal="tab_changed" from="TabContainer" to="." method="open_interface_tab" binds= [["Main", "Scenario", "Tween"]]]
-[connection signal="pressed" from="TabContainer/Dom Adamskich/Start" to="." method="load_scenario" binds= ["House"]]
-[connection signal="pressed" from="TabContainer/Apartamenty Sołdeckich/Start" to="." method="load_scenario" binds= ["Apartment"]]
+[connection signal="pressed" from="TabContainer/Dom Dziadka Z Wermachtu/Start" to="." method="load_scenario" binds= ["House"]]
+[connection signal="pressed" from="TabContainer/Apartamenty Nowy Pieńkowski/Start" to="." method="load_scenario" binds= ["Apartment"]]

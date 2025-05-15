@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://bpt63ik04ltyq"]
 
-[ext_resource type="PackedScene" uid="uid://b8bxw752o03tk" path="res://common/models/props/tv1.glb" id="1_kalcm"]
+[ext_resource type="PackedScene" uid="uid://pjwjwd4hx4v3" path="res://common/models/props/tv1.glb" id="1_kalcm"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_jcb4w"]
 [ext_resource type="Material" uid="uid://dqxp1a3bondyi" path="res://common/textures/asbestos.tres" id="2_uxbkj"]
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="3_uxbkj"]

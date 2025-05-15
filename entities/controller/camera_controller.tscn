@@ -102,8 +102,8 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="StateMachine/CharacterState/Control/Info/VBox"]
 layout_mode = 2
-text = "Zniszcz meble zanieczyszczone 
-azbestem i usuń wszelkie ślady!
+text = "Zniszcz meble zalane azbestem i usuń 
+wszelkie ślady!
 "
 
 [node name="Timer" type="Label" parent="StateMachine/CharacterState/Control/Info/VBox"]

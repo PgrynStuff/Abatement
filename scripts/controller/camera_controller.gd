@@ -7,9 +7,11 @@ extends Node
 var interactable: InteractableComponent
 var object: RigidBody3D
 
-func _ready() -> void:
+func _enter_tree() -> void:
 	Global.camera_controller = self
 	Global.settings_controller.setting_changed.connect(update_settings)
+
+func _ready() -> void:
 	update_settings()
 
 func _process(_delta: float) -> void:

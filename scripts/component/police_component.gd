@@ -4,6 +4,7 @@ extends PathFollow3D
 @export var light_left: OmniLight3D
 @export var light_right: OmniLight3D
 @export var duration: float = 20.0
+@export var audio: AudioStreamPlayer3D
 
 var timer: float
 var enable: bool
@@ -29,6 +30,8 @@ func start(status) -> void:
 	
 	enable = true
 	light_left.visible = true
+	
+	audio.play()
 	
 	var tween = create_tween()
 	tween.tween_property(self, "progress_ratio", 1.0, duration)
