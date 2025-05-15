@@ -1,17 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://gosqx2nj60mu"]
+[gd_scene load_steps=9 format=4 uid="uid://gosqx2nj60mu"]
 
 [ext_resource type="Script" uid="uid://dmsa0tsdu6huh" path="res://scripts/component/destructible_component.gd" id="1_gsmn2"]
 [ext_resource type="PackedScene" uid="uid://du05iabh86uav" path="res://common/models/props/bed.glb" id="1_k2ekr"]
 [ext_resource type="Material" uid="uid://dqxp1a3bondyi" path="res://common/textures/asbestos.tres" id="2_5xwa8"]
 [ext_resource type="Script" uid="uid://dvkbsd3lkesh8" path="res://scripts/component/infected_component.gd" id="2_j0a62"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0a62"]
-load_path = "res://.godot/imported/infected.png-040a22a3112d22a6ad92e0494754d6c8.s3tc.ctex"
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_5xwa8"]
-transparency = 1
-blend_mode = 4
-albedo_texture = SubResource("CompressedTexture2D_j0a62")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_y15iy"]
 _surfaces = [{
@@ -57,7 +49,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 414,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAABAAUABAAFAAYABAAHAAYABAAIAAcABgAJAAQABgAKAAkACQALAAwACQANAAsACgANAAkACgAOAA0ADwAOAAoADwAQAA4AEQASABMAEQAUABIAFQAWABMAFQAXABYAFQAYABcAFQAZABgAFwAaABUAFwAbABoAHAAdAB4AHAAfAB0AIAAeAB0AIAAhAB4AIgAhACAAIQAiACMAIQAjACQAIQAkACUAJgAhACUAJgAnACEAKAApACoAKAArACkALAAqACkALQAqACwAKgAtAC4ALwAsACkALwAwACwAMAAvADEAMQAvADIAMwAyAC8AMwA0ADIANQA2ADcANQA4ADYAOQA6ADsAOQA8ADoAPQA+ADoAPQA/AD4AQAA/AD0APwBAAEEAPwBBAEIAPwBCAEMARAA/AEMARABFAD8ARgBHAEgARgBJAEcARwBKAEgASwBKAEcASwBHAEwASwBMAE0ATgBPAEwATgBQAE8AUQBMAE8ATABRAFIAUgBRAFMAVABVAFYAVABXAFUAWABVAFkAWABZAFoAWABbAFoAWABcAFsAWgBdAFgAWgBeAF0AXwBgAGEAXwBiAGAAYwBkAGEAZQBkAGYAZQBnAGQAYwBoAGQAYwBpAGgAYwBqAGkAaABrAGMAaABsAGsAbQBuAG8AbQBwAG4AcQByAHMAcQB0AHIAdQB2AHcAdQB4AHYAeQB6AHsAeQB8AHoAfQB+AH8AfQCAAH4AgQCCAIMAgQCEAIIAhQCGAIcAhQCIAIYAiACJAIoAiACKAIsAjACLAI0AjACOAIsAjgCPAJAAjgCRAI8AkgCTAJQAkgCVAJMAlgCXAJgAlgCZAJcAmgCbAJwAmgCdAJsAngCfAKAAngChAJ8AogCjAKQAogClAKMApgCnAKgApgCpAKcAqgCrAKwAqgCtAKsArgCvALAArgCxAK8AsgCzALQAsgC1ALMAtgC3ALgAtgC5ALcAuQC6ALcAtgC7ALkAtgC8ALsAuQC9ALoAvQC+ALoAvQC/AL4AwAC/AL0AwAC9AMEAwgDDAMQAwgDFAMMAxADGAMIAxADHAMYAyADGAMcAyADHAMkA"),
-"material": SubResource("ORMMaterial3D_5xwa8"),
+"material": ExtResource("2_5xwa8"),
 "name": "Bed",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

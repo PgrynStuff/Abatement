@@ -144,6 +144,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0194702, -0.0010376, 0.073
 shape = SubResource("BoxShape3D_ik0mt")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
+mass = 20.0
 
 [node name="fridge_door" parent="RigidBody3D" instance=ExtResource("4_uhbfo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.462281)

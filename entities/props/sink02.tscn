@@ -40,7 +40,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4wvjo")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i0cnk"]
-size = Vector3(0.8125, 0.329811, 0.462952)
+size = Vector3(0.8125, 0.245472, 0.462952)
 
 [node name="Sink01" type="RigidBody3D"]
 mass = 10.0
@@ -63,5 +63,5 @@ sfx_damage = Array[String](["glass01", "glass02", "glass03"])
 metadata/_custom_type_script = "uid://dmsa0tsdu6huh"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00488281, -0.0425288, 0.239345)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00488281, -0.000359252, 0.239345)
 shape = SubResource("BoxShape3D_i0cnk")
