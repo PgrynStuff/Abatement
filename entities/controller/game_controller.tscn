@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjo2cpjmkikaq"]
+[gd_scene load_steps=5 format=3 uid="uid://bjo2cpjmkikaq"]
 
 [ext_resource type="Script" uid="uid://citfum66te5hr" path="res://scripts/controller/game_controller.gd" id="1_lqq5m"]
 [ext_resource type="Script" uid="uid://oq127gp5v8el" path="res://scripts/resource/game_resource.gd" id="2_3xiio"]
 [ext_resource type="Resource" uid="uid://5jfhls4mp2ke" path="res://common/resources/game/apartment.tres" id="3_svvb4"]
-[ext_resource type="Resource" uid="uid://smrpwm06buna" path="res://common/resources/game/barn.tres" id="4_35rb0"]
 [ext_resource type="Resource" uid="uid://c4pypd66420n5" path="res://common/resources/game/house.tres" id="5_qu0ad"]
 
 [node name="GameController" type="Node"]
 script = ExtResource("1_lqq5m")
-scenarios = Array[ExtResource("2_3xiio")]([ExtResource("3_svvb4"), ExtResource("4_35rb0"), ExtResource("5_qu0ad")])
+scenarios = Array[ExtResource("2_3xiio")]([ExtResource("3_svvb4"), ExtResource("5_qu0ad")])
 metadata/_custom_type_script = "uid://citfum66te5hr"

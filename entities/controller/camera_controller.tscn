@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://m5iw5dtqrmtt"]
+[gd_scene load_steps=11 format=3 uid="uid://m5iw5dtqrmtt"]
 
 [ext_resource type="Script" uid="uid://c6u1o5t68nyj5" path="res://scripts/controller/camera_controller.gd" id="1_jhfef"]
 [ext_resource type="Script" uid="uid://dnxrwla16ocue" path="res://scripts/state/state_machine.gd" id="2_m3otb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c5k8ifctnhd6j" path="res://common/textures/paper.png" id="4_gqlpa"]
 [ext_resource type="Script" uid="uid://dtkalfwuo88xj" path="res://scripts/state/camera/path_state.gd" id="4_i3f2e"]
 [ext_resource type="Script" uid="uid://dqchej6yxe4p8" path="res://scripts/component/path_follow_component.gd" id="5_j36du"]
+[ext_resource type="Script" uid="uid://ba48xlmfdgbvs" path="res://scripts/interface/ending_interface.gd" id="7_qwg8l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05pi1"]
 bg_color = Color(1, 1, 1, 1)
@@ -68,12 +69,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = -15.0
-offset_bottom = -15.0
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Info" type="TextureRect" parent="StateMachine/CharacterState/Control"]
 layout_mode = 1
@@ -120,6 +122,71 @@ text = "Ilość Mebli:"
 script = ExtResource("4_i3f2e")
 path_follow = NodePath("../../PathFollowComponent")
 metadata/_custom_type_script = "uid://dtkalfwuo88xj"
+
+[node name="EndingInterface" type="Node" parent="StateMachine/PathState" node_paths=PackedStringArray("text", "score", "azbestos", "destructables")]
+script = ExtResource("7_qwg8l")
+text = NodePath("Control/TextureRect/VBoxContainer/Text")
+score = NodePath("Control/TextureRect/VBoxContainer/Score")
+azbestos = NodePath("Control/TextureRect/VBoxContainer/Azbestos")
+destructables = NodePath("Control/TextureRect/VBoxContainer/Destructables")
+metadata/_custom_type_script = "uid://ba48xlmfdgbvs"
+
+[node name="Control" type="Control" parent="StateMachine/PathState/EndingInterface"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_gqlpa")
+
+[node name="TextureRect" type="TextureRect" parent="StateMachine/PathState/EndingInterface/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gqlpa")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StateMachine/PathState/EndingInterface/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="StateMachine/PathState/EndingInterface/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "A"
+horizontal_alignment = 1
+
+[node name="Azbestos" type="Label" parent="StateMachine/PathState/EndingInterface/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+text = "A"
+horizontal_alignment = 1
+
+[node name="Destructables" type="Label" parent="StateMachine/PathState/EndingInterface/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+text = "A"
+horizontal_alignment = 1
+
+[node name="Text" type="Label" parent="StateMachine/PathState/EndingInterface/Control/TextureRect/VBoxContainer"]
+layout_mode = 2
+text = "Dobra robota... Tym razem"
+horizontal_alignment = 1
 
 [node name="PathFollowComponent" type="PathFollow3D" parent="."]
 script = ExtResource("5_j36du")

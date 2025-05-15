@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cqusntysmdupk" path="res://scripts/resource/setting_resource.gd" id="2_ppeh6"]
 [ext_resource type="Resource" uid="uid://bvangmtytdted" path="res://common/resources/settings/sound/volume_main.tres" id="3_scgxu"]
 [ext_resource type="Resource" uid="uid://nna51bqdu4qr" path="res://common/resources/settings/sound/volume_narrator.tres" id="4_dwyht"]
-[ext_resource type="Resource" path="res://common/resources/settings/sound/volume_music.tres" id="4_slebq"]
+[ext_resource type="Resource" uid="uid://b17qbtqlt5pdo" path="res://common/resources/settings/sound/volume_music.tres" id="4_slebq"]
 [ext_resource type="Resource" uid="uid://gpqviohawhk8" path="res://common/resources/settings/sound/volume_sfx.tres" id="5_slebq"]
 
 [resource]

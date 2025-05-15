@@ -20,7 +20,7 @@ var status_intro: bool
 var status_await: bool
 var status_outro: bool
 
-func _ready() -> void:
+func _enter_tree() -> void:
 	Global.game_controller = self
 	game_status.emit(GAME_STATUS.Lobby)
 	status_await = true

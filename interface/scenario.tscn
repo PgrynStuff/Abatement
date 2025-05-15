@@ -96,48 +96,10 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Rozpocznij Scenariusz"
 
-[node name="Stodoła Pieńkowskich" type="Control" parent="TabContainer"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="Title" type="Label" parent="TabContainer/Stodoła Pieńkowskich"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 40.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
-text = "Stodoła Pieńkowskich"
-vertical_alignment = 1
-
-[node name="Description" type="Label" parent="TabContainer/Stodoła Pieńkowskich"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 40.0
-offset_bottom = -31.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Start" type="Button" parent="TabContainer/Stodoła Pieńkowskich"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -177.0
-offset_top = -31.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Rozpocznij Scenariusz"
-
 [node name="Apartamenty Sołdeckich" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="Title" type="Label" parent="TabContainer/Apartamenty Sołdeckich"]
 layout_mode = 1
@@ -175,5 +137,4 @@ text = "Rozpocznij Scenariusz"
 
 [connection signal="tab_changed" from="TabContainer" to="." method="open_interface_tab" binds= [["Main", "Scenario", "Tween"]]]
 [connection signal="pressed" from="TabContainer/Dom Adamskich/Start" to="." method="load_scenario" binds= ["House"]]
-[connection signal="pressed" from="TabContainer/Stodoła Pieńkowskich/Start" to="." method="load_scenario" binds= ["Barn"]]
 [connection signal="pressed" from="TabContainer/Apartamenty Sołdeckich/Start" to="." method="load_scenario" binds= ["Apartment"]]
