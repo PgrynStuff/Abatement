@@ -426,10 +426,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.0722, 2.51812, -0.0181755
 curve = SubResource("Curve3D_efgw4")
 
 [node name="Police" parent="Path3D" instance=ExtResource("28_kfc2r")]
-transform = Transform3D(-0.00228838, 0, -0.999997, 0, 1, 0, 0.999997, 0, -0.00228838, -12.4306, 0.311035, 34.7665)
+transform = Transform3D(-0.00228695, 0, -0.999997, 0, 1, 0, 0.999997, 0, -0.00228695, -12.4306, 0.311035, 34.7665)
 
 [node name="Path3D2" type="Path3D" parent="."]
 curve = SubResource("Curve3D_kfc2r")
 
 [node name="Police" parent="Path3D2" instance=ExtResource("28_kfc2r")]
-transform = Transform3D(-0.00165574, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00165574, -11.97, -9.50696, -7.98462)
+transform = Transform3D(-0.00165586, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00165586, -11.97, -9.50696, -7.98462)
