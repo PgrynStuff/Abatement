@@ -20,12 +20,24 @@ anchor_bottom = 1.0
 offset_right = 300.0
 grow_vertical = 2
 text = "Programowanie:
-Ja
+Jakub Wyrzykowskl
 
 Narrator:
-Ten tam
+Wojciech Sołdecki
 
 Mapy:
-Ten tam"
+Wojciech Sołdecki
+
+SFX design:
+Jakub Wyrzykowskl
+
+SFX credits to:
+Valve
+
+Muzyka:
+Youtube Audio Libary
+
+Special thanks to:
+func_godot addon"
 horizontal_alignment = 1
 vertical_alignment = 1
